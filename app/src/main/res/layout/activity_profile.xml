@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+
+    >
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    >
+
+        <ImageButton
+            android:id="@+id/ibt_image1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/girl"
+            android:background="@android:color/white"
+            />
+
+        <ImageButton
+            android:id="@+id/ibt_image2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/photocamera" />
+</FrameLayout>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    >
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name "
+                            android:layout_marginLeft="40dp"
+
+                            />
+                        <EditText
+                            android:id="@+id/edt_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="nhập tên "
+                            android:layout_marginLeft="40dp"
+                            android:textSize="15dp"
+                            android:background="@android:color/transparent"
+
+                            />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Birthday"
+                            android:layout_marginLeft="35dp"
+
+                            />
+                        <EditText
+                            android:id="@+id/edt_ngay_sinh"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="00/00/0000"
+                            android:layout_marginLeft="30dp"
+                            android:textSize="15dp"
+                            android:background="@android:color/transparent"
+
+                            />
+
+
+                </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:orientation="horizontal"
+                            >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Email "
+                                    android:layout_marginLeft="40dp"
+                                    />
+                                <EditText
+                                    android:id="@+id/edt_email"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="a@gmail.com"
+                                    android:layout_marginLeft="43dp"
+                                    android:textSize="15dp"
+                                    android:background="@android:color/transparent"
+                                    />
+
+
+                        </LinearLayout>
+                </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal"
+                            >
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/scale"
+                                    android:layout_marginLeft="35dp"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Weight "
+                                    android:layout_marginLeft="5dp"
+                                    />
+                                <EditText
+                                    android:id="@+id/edt_weight"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint=""
+                                    android:layout_marginLeft="20dp"
+                                    android:background="@android:color/transparent"
+                                    android:textSize="15dp"
+                                    />
+
+
+                        </LinearLayout>
+                </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/height"
+                                    android:layout_marginLeft="35dp"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Height "
+                                    android:layout_marginLeft="5dp"
+
+                                    />
+
+                                <EditText
+                                    android:id="@+id/edt_height"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint=""
+                                    android:background="@android:color/transparent"
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="20dp"
+
+                                    />
+
+
+                        </LinearLayout>
+                </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+
+            >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal"
+                            >
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/gender"
+                                    android:layout_marginLeft="35dp"
+                                    />
+                                <TextView
+                                    android:paddingLeft="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Gender "
+
+                                    />
+
+                                <Spinner
+                                    android:id="@+id/id_spanner"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                 android:layout_marginLeft="20dp"
+
+                                    >
+                                </Spinner>
+
+
+                        </LinearLayout>
+                </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Your IBM: "
+                            android:textSize="25dp"
+                            />
+                        <TextView
+                            android:id="@+id/edt_muc_do"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="15dp"
+                            android:textColor="#f06292"
+                            />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_ibm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="50dp"
+                    android:text=""
+                    android:textColor="#f06292"
+                    android:textStyle="bold"
+
+                    />
+        </LinearLayout>
+
+</LinearLayout>
