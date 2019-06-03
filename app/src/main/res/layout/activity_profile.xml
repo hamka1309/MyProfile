@@ -6,114 +6,149 @@
     android:background="@android:color/white"
 
     >
-<FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="150dp"
-    >
+       <android.support.v7.widget.CardView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="10dp"
 
-        <ImageButton
-            android:id="@+id/ibt_image1"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center"
-            android:src="@drawable/girl"
-            android:background="@android:color/white"
-            />
+           >
+               <android.support.v7.widget.Toolbar
+                   android:id="@+id/toobal1"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="#FFF"
+                   ></android.support.v7.widget.Toolbar>
+       </android.support.v7.widget.CardView>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            >
 
-        <ImageButton
-            android:id="@+id/ibt_image2"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="35dp"
-            android:src="@drawable/photocamera" />
-</FrameLayout>
+                <ImageButton
+                    android:id="@+id/ibt_image1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/girl"
+
+                    android:background="@android:color/white"
+                    />
+
+                <ImageButton
+                    android:id="@+id/ibt_image2"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/photocamera" />
+        </FrameLayout>
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="130dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
             >
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="10dp"
                     android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:orientation="horizontal"
-                    >
-                        <TextView
 
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Name "
-                            android:layout_marginLeft="40dp"
-
-                            />
-                        <EditText
-                            android:id="@+id/edt_name"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="nhập tên "
-                            android:layout_marginLeft="40dp"
-                            android:textSize="15dp"
-                            android:background="@android:color/transparent"
-
-                            />
-
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:orientation="horizontal"
-                    >
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=" Birthday"
-                            android:layout_marginLeft="35dp"
-
-                            />
-                        <EditText
-                            android:id="@+id/edt_ngay_sinh"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="00/00/0000"
-                            android:layout_marginLeft="30dp"
-                            android:textSize="15dp"
-                            android:background="@android:color/transparent"
-
-                            />
-
-
-                </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
-                            android:orientation="horizontal"
-                            >
+                            android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="40dp"
+                                    android:text="Name "
+
+                                    />
+
+                                <EditText
+                                    android:id="@+id/edt_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:background="#e0e0e0"
+                                    android:hint="nhập tên "
+                                    android:maxLines="1"
+                                    android:textSize="15dp"
+                                    android:paddingLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:textColor="@android:color/darker_gray"
+
+                                    />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Email "
-                                    android:layout_marginLeft="40dp"
+                                    android:layout_marginLeft="35dp"
+                                    android:text=" Birthday"
+
+
                                     />
+
+                                <TextView
+                                    android:id="@+id/tv_ngay_sinh"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:background="#e0e0e0"
+                                    android:hint="chọn ngày"
+                                    android:textSize="15dp"
+                                    android:paddingLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="40dp"
+                                    android:text="Email "
+
+                                    />
+
                                 <EditText
                                     android:id="@+id/edt_email"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:hint="a@gmail.com"
+                                    android:layout_height="30dp"
                                     android:layout_marginLeft="43dp"
+                                    android:background="#e0e0e0"
+                                    android:hint="a@gmail.com"
+                                    android:inputType="textEmailAddress"
+                                    android:maxLines="1"
                                     android:textSize="15dp"
-                                    android:background="@android:color/transparent"
+                                    android:paddingLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:textColor="@android:color/darker_gray"
+
                                     />
-
-
                         </LinearLayout>
                 </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -121,8 +156,8 @@
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp">
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -131,12 +166,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
                             >
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:src="@drawable/scale"
                                     android:layout_marginLeft="35dp"
+
                                     />
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -144,16 +181,39 @@
                                     android:text="Weight "
                                     android:layout_marginLeft="5dp"
                                     />
-                                <EditText
-                                    android:id="@+id/edt_weight"
+                                <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:hint=""
-                                    android:layout_marginLeft="20dp"
-                                    android:background="@android:color/transparent"
-                                    android:textSize="15dp"
-                                    />
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:gravity="right"
+                                    >
+                                        <EditText
+                                            android:id="@+id/edt_weight"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:hint=""
+                                            android:layout_marginLeft="20dp"
+                                            android:background="@android:color/transparent"
+                                            android:textSize="15dp"
+                                            android:inputType="numberDecimal"
+                                            android:maxLines="1"
+                                            android:textColor="@android:color/darker_gray"
+                                            />
+                                        <TextView
+                                            android:gravity="right"
+                                            android:layout_marginRight="20dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:background="@android:color/transparent"
+                                            android:textSize="15dp"
+                                            android:inputType="numberDecimal"
+                                            android:maxLines="1"
+                                            android:text="Kg"
+                                            />
 
+
+                                </LinearLayout>
 
                         </LinearLayout>
                 </LinearLayout>
@@ -161,12 +221,13 @@
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp">
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp">
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -186,17 +247,39 @@
 
                                     />
 
-                                <EditText
-                                    android:id="@+id/edt_height"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:hint=""
-                                    android:background="@android:color/transparent"
-                                    android:textSize="15dp"
-                                    android:layout_marginLeft="20dp"
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                >
 
-                                    />
+                                    <EditText
+                                        android:id="@+id/edt_height"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:hint=""
+                                        android:background="@android:color/transparent"
+                                        android:textSize="15dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:inputType="numberDecimal"
+                                        android:maxLines="1"
+                                        android:textColor="@android:color/darker_gray"
 
+                                        />
+                                    <TextView
+                                        android:gravity="right"
+                                        android:layout_marginRight="20dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:background="@android:color/transparent"
+                                        android:textSize="15dp"
+                                        android:inputType="numberDecimal"
+                                        android:maxLines="1"
+                                        android:text="Cm"
+                                        />
+
+                            </LinearLayout>
 
                         </LinearLayout>
                 </LinearLayout>
@@ -204,8 +287,8 @@
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
 
             >
                 <LinearLayout
@@ -217,6 +300,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
                             >
                                 <ImageView
                                     android:layout_width="wrap_content"
@@ -232,14 +316,20 @@
 
                                     />
 
-                                <Spinner
-                                    android:id="@+id/id_spanner"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="30dp"
-                                 android:layout_marginLeft="20dp"
-
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="right"
                                     >
-                                </Spinner>
+                                    <Spinner
+                                        android:id="@+id/id_spanner"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="30dp"
+                                        android:layout_marginLeft="20dp"
+
+                                        >
+                                    </Spinner>
+                                </LinearLayout>
 
 
                         </LinearLayout>
@@ -279,6 +369,7 @@
                     android:text=""
                     android:textColor="#f06292"
                     android:textStyle="bold"
+                    android:layout_marginTop="10dp"
 
                     />
         </LinearLayout>

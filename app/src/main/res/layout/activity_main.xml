@@ -4,30 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center" tools:context=".MainActivity"
+     tools:context=".MainActivity"
 android:background="#e1bee7"
     android:orientation="vertical"
 
     >
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="My profile"
-        android:textStyle="bold"
-        android:textSize="25dp"
-        android:textColor="@android:color/black"
-        android:gravity="center"
-        />
-
-<Button
-
-    android:id="@+id/btn_ok"
-    android:text="Oke"
-    android:layout_width="350dp"
+<android.support.v7.widget.Toolbar
+    android:id="@+id/toobal"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="90dp"
-    android:background="@android:color/holo_blue_light"
+    android:background="#FFF"
+    ></android.support.v7.widget.Toolbar>
 
-    />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My profile"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_marginTop="100dp"
+            />
+
+        <Button
+
+            android:id="@+id/btn_ok"
+            android:text="Oke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@android:color/holo_blue_light"
+
+            />
+
+
 
 </LinearLayout>
