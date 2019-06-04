@@ -12,7 +12,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-private Button btnOk;
+private Button btOk;
 private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +22,8 @@ private Toolbar toolbar;
 
         setContentView(R.layout.activity_main);
 
-        btnOk= findViewById(R.id.btn_ok);
-        btnOk.setOnClickListener(this);
+        btOk= findViewById(R.id.bt_ok);
+        btOk.setOnClickListener(this);
 
         toolbar= findViewById(R.id.toobal);
         toolbar.setTitle("My profile");

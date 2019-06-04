@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:background="@android:color/white"
-    android:orientation="vertical">
 
+    >
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="@dimen/dp_4">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toobal1"
@@ -19,120 +22,139 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp">
+        android:layout_height="@dimen/dp_150">
 
         <ImageButton
-            android:id="@+id/ibt_image1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:id="@+id/image_button_image1"
+            android:layout_width="@dimen/dp_104"
+            android:layout_height="@dimen/dp_104"
             android:layout_gravity="center"
             android:background="@android:color/white"
-            android:src="@drawable/girl" />
+            android:src="@drawable/avata_ic_girl" />
 
         <ImageButton
-            android:id="@+id/ibt_image2"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:id="@+id/image_button_image2"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
             android:layout_gravity="center"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="40dp"
-            android:src="@drawable/photocamera" />
+            android:layout_marginLeft="@dimen/dp_44"
+            android:layout_marginTop="@dimen/dp_44"
+            android:src="@drawable/avata_ic_photocamera" />
     </FrameLayout>
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        android:layout_marginBottom="@dimen/dp12"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="130dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp14"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:orientation="horizontal">
+                android:layout_height="@dimen/dp_36"
+                android:orientation="horizontal"
+                >
 
                 <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:text="Name " />
-
-                <EditText
-                    android:id="@+id/edt_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="10dp"
-                    android:background="#e0e0e0"
-                    android:hint="nhập tên "
-                    android:maxLines="1"
-                    android:paddingLeft="25dp"
-                    android:textColor="@android:color/darker_gray"
-                    android:textSize="15dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:text=" Birthday" />
-
-                <TextView
-                    android:id="@+id/tv_ngay_sinh"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="10dp"
-                    android:background="#e0e0e0"
-                    android:hint="chọn ngày"
-                    android:paddingLeft="20dp"
-                    android:textSize="15dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:text="Email "
-
+                    android:layout_width="@dimen/dp_53"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:text="@string/name"
+                    android:gravity="left|center"
+                    android:textSize="@dimen/sp12"
                     />
 
                 <EditText
-                    android:id="@+id/edt_email"
+                    android:id="@+id/et_name"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="43dp"
-                    android:layout_marginRight="25dp"
-                    android:background="#e0e0e0"
-                    android:hint="a@gmail.com"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp12"
+                    android:layout_marginRight="@dimen/dp16"
+                    android:background="@color/gray_back"
+                    android:hint="@string/hint_name"
+                    android:maxLines="1"
+                    android:gravity="left|center"
+                    android:textColor="@color/gray_text"
+                    android:textSize="@dimen/sp12"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10"
+
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_36"
+                android:layout_marginTop="@dimen/dp14"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/dp_53"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:textSize="@dimen/dp12"
+                    android:gravity="center|left"
+                    android:text="@string/birthday" />
+
+                <TextView
+                    android:id="@+id/tv_birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp12"
+                    android:layout_marginRight="@dimen/dp16"
+                    android:background="@color/gray_back"
+                    android:hint="@string/hint_birthday"
+                    android:gravity="left|center"
+                    android:textSize="@dimen/sp12"
+                    android:paddingTop="@dimen/dp_4"
+                    android:textColor="@color/gray_text"
+                    android:paddingRight="@dimen/dp_10"
+                    android:paddingLeft="@dimen/dp_10"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_36"
+                android:layout_marginTop="@dimen/dp14"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/dp16"
+                >
+
+                <TextView
+                    android:layout_width="@dimen/dp_53"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:gravity="left|center"
+                    android:text="@string/email"
+                    android:textSize="@dimen/dp12"
+                    />
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp12"
+                    android:layout_marginRight="@dimen/dp16"
+                    android:hint="@string/hint_email"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
-                    android:paddingLeft="10dp"
-                    android:textColor="@android:color/darker_gray"
-                    android:textSize="15dp"
-
-                    />
+                    android:gravity="left|center"
+                    android:textColor="@color/gray_text"
+                    android:textSize="@dimen/sp12"
+                    android:background="@color/gray_back"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10"/>
             </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>
@@ -140,33 +162,37 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        app:cardElevation="3dp"
+        >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="@dimen/dp_44"
+                android:layout_marginTop="@dimen/dp_10"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="35dp"
-                    android:src="@drawable/scale"
-
-                    />
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_24"
+                    android:src="@drawable/icon_ic_scale"
+                    android:layout_gravity="center|left"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:text="Weight " />
+                    android:layout_width="@dimen/dp_53"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:text="@string/weight"
+                    android:gravity="left|center"
+                    android:textSize="@dimen/sp12"
+                    android:textStyle="bold"
+                    />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -175,135 +201,59 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/edt_weight"
+                        android:id="@+id/et_weight"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_24"
                         android:background="@android:color/transparent"
-                        android:hint=""
+                        android:hint="0.0"
+                        android:gravity="center"
                         android:inputType="numberDecimal"
                         android:maxLines="1"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="15dp" />
+                        android:textColor="@color/gray_text"
+                        android:textSize="@dimen/sp12" />
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="20dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_24"
                         android:background="@android:color/transparent"
-                        android:gravity="right"
+                        android:gravity="right|center"
                         android:inputType="numberDecimal"
                         android:maxLines="1"
-                        android:text="Kg"
-                        android:textSize="15dp" />
-
+                        android:text="kg"
+                        android:textSize="@dimen/sp12" />
 
                 </LinearLayout>
 
-            </LinearLayout>
         </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="@dimen/dp_44"
+            android:layout_marginTop="@dimen/dp16"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="35dp"
-                    android:src="@drawable/height" />
+                    android:layout_marginLeft="@dimen/dp_24"
+                    android:src="@drawable/profile_ic_height" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:text="Height "
-
-                    />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="right">
-
-                    <EditText
-                        android:id="@+id/edt_height"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:background="@android:color/transparent"
-                        android:hint=""
-                        android:inputType="numberDecimal"
-                        android:maxLines="1"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="15dp"
-
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="20dp"
-                        android:background="@android:color/transparent"
-                        android:gravity="right"
-                        android:inputType="numberDecimal"
-                        android:maxLines="1"
-                        android:text="Cm"
-                        android:textSize="15dp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-
-        >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="35dp"
-                    android:src="@drawable/gender" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="5dp"
-                    android:text="Gender "
-
+                    android:layout_width="@dimen/dp_53"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:gravity="left|center"
+                    android:text="@string/height"
+                    android:textSize="@dimen/sp12"
+                    android:textStyle="bold"
                     />
 
                 <LinearLayout
@@ -311,19 +261,77 @@
                     android:layout_height="match_parent"
                     android:gravity="right">
 
-                    <Spinner
-                        android:id="@+id/id_spanner"
+                    <EditText
+                        android:id="@+id/et_height"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:layout_marginLeft="20dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_24"
+                        android:background="@android:color/transparent"
+                        android:hint="0"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:textColor="@color/gray_text"
+                        android:textSize="@dimen/sp12" />
 
-                        ></Spinner>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_24"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:text="cm"
+                        android:textSize="@dimen/sp12" />
+
                 </LinearLayout>
-
 
             </LinearLayout>
         </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:layout_marginTop="@dimen/dp16"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/dp_10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:src="@drawable/profile_ic_gender" />
+
+            <TextView
+                android:layout_width="@dimen/dp_53"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp16"
+                android:gravity="left|center"
+                android:textSize="@dimen/sp12"
+                android:text="Gender "
+                android:textStyle="bold"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right">
+
+                <Spinner
+                    android:id="@+id/id_spanner"
+                    android:layout_width="@dimen/dp_53"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dp_24"></Spinner>
+            </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
     </android.support.v7.widget.CardView>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -339,29 +347,28 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Your IBM: "
-                android:textSize="25dp" />
+                android:text="@string/ibm"
+                android:textSize="@dimen/sp12"/>
 
             <TextView
-                android:id="@+id/edt_muc_do"
+                android:id="@+id/et_level"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:textColor="#f06292"
-                android:textSize="15dp" />
+                android:layout_marginLeft="@dimen/dp_10"
+                android:text="normal"
+                android:textColor="@color/pink"
+                android:textSize="@dimen/sp12"/>
         </LinearLayout>
 
         <TextView
             android:id="@+id/tv_ibm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text=""
-            android:textColor="#f06292"
-            android:textSize="50dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textColor="@color/pink"
+            android:textSize="@dimen/sp_50"
             android:textStyle="bold"
-
-            />
+            android:text="20.0"/>
     </LinearLayout>
 
 </LinearLayout>

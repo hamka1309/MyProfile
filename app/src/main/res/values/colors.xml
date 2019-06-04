@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="title" >#757575</color>
+    <color name="gray_back">#ebebeb</color>
+    <color name="gray_text">#7c7c7c</color>
+    <color name="pink">#f06292</color>
 </resources>

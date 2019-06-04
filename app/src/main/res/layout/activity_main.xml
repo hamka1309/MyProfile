@@ -4,40 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-     tools:context=".MainActivity"
-android:background="#e1bee7"
     android:orientation="vertical"
 
-    >
-<android.support.v7.widget.Toolbar
-    android:id="@+id/toobal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#FFF"
-    ></android.support.v7.widget.Toolbar>
+    tools:context=".MainActivity">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="My profile"
-            android:textStyle="bold"
-            android:textSize="25dp"
-            android:textColor="@android:color/black"
-            android:gravity="center"
-            android:layout_marginTop="100dp"
-            />
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toobal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"></android.support.v7.widget.Toolbar>
 
-        <Button
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_104"
+        android:gravity="center"
+        android:text="@string/title"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/dp_24"
+        android:textStyle="bold" />
 
-            android:id="@+id/btn_ok"
-            android:text="Oke"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:background="@android:color/holo_blue_light"
+    <Button
 
-            />
-
-
-
+        android:id="@+id/bt_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_53"
+        android:background="@android:color/holo_blue_light"
+        android:text="@string/ok" />
 </LinearLayout>
