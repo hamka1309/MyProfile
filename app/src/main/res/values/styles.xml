@@ -6,10 +6,12 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-<style name="TextAppearance.AppCompat.Widget.ActionBar.Title" parent="@android:style/TextAppearance">
-    <item name="android:textColor" >@color/title</item>
 
-</style>
+    <style name="TextAppearance.AppCompat.Widget.ActionBar.Title" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/title</item>
+
+    </style>
+
     <style name="AppThmeme.Base" parent="Theme.AppCompat.NoActionBar"></style>
 
 </resources>

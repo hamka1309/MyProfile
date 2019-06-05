@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:background="@android:color/white"
+    android:orientation="vertical"
 
     >
+
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp_4">
+        android:layout_marginBottom="@dimen/dp4">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toobal1"
@@ -22,23 +23,23 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_150">
+        android:layout_height="@dimen/dp150">
 
         <ImageButton
             android:id="@+id/image_button_image1"
-            android:layout_width="@dimen/dp_104"
-            android:layout_height="@dimen/dp_104"
+            android:layout_width="@dimen/dp104"
+            android:layout_height="@dimen/dp104"
             android:layout_gravity="center"
             android:background="@android:color/white"
             android:src="@drawable/avata_ic_girl" />
 
         <ImageButton
             android:id="@+id/image_button_image2"
-            android:layout_width="@dimen/dp_24"
-            android:layout_height="@dimen/dp_24"
+            android:layout_width="@dimen/dp24"
+            android:layout_height="@dimen/dp24"
             android:layout_gravity="center"
-            android:layout_marginLeft="@dimen/dp_44"
-            android:layout_marginTop="@dimen/dp_44"
+            android:layout_marginLeft="@dimen/dp44"
+            android:layout_marginTop="@dimen/dp44"
             android:src="@drawable/avata_ic_photocamera" />
     </FrameLayout>
 
@@ -47,8 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dp16"
         android:layout_marginRight="@dimen/dp16"
-        android:layout_marginBottom="@dimen/dp12"
-        >
+        android:layout_marginBottom="@dimen/dp12">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,18 +58,16 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_36"
-                android:orientation="horizontal"
-                >
+                android:layout_height="@dimen/dp36"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="@dimen/dp_53"
-                    android:layout_height="@dimen/dp_32"
+                    android:layout_width="@dimen/dp53"
+                    android:layout_height="@dimen/dp32"
                     android:layout_marginLeft="@dimen/dp16"
-                    android:text="@string/name"
                     android:gravity="left|center"
-                    android:textSize="@dimen/sp12"
-                    />
+                    android:text="@string/profile_name"
+                    android:textSize="@dimen/sp14" />
 
                 <EditText
                     android:id="@+id/et_name"
@@ -78,32 +76,31 @@
                     android:layout_marginLeft="@dimen/dp12"
                     android:layout_marginRight="@dimen/dp16"
                     android:background="@color/gray_back"
-                    android:hint="@string/hint_name"
-                    android:maxLines="1"
                     android:gravity="left|center"
+                    android:hint="@string/profile_hint_name"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/dp10"
+                    android:paddingRight="@dimen/dp10"
                     android:textColor="@color/gray_text"
-                    android:textSize="@dimen/sp12"
-                    android:paddingLeft="@dimen/dp_10"
-                    android:paddingRight="@dimen/dp_10"
-
-
-                    />
+                    android:textSize="@dimen/sp14"
+                    android:textColorHint="@color/gray_hint"/>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_36"
+                android:layout_height="@dimen/dp36"
                 android:layout_marginTop="@dimen/dp14"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="@dimen/dp_53"
+                    android:layout_width="@dimen/dp53"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/dp16"
-                    android:textSize="@dimen/dp12"
                     android:gravity="center|left"
-                    android:text="@string/birthday" />
+                    android:text="@string/profile_birthday"
+                    android:textSize="@dimen/dp14" />
 
                 <TextView
                     android:id="@+id/tv_birthday"
@@ -112,49 +109,50 @@
                     android:layout_marginLeft="@dimen/dp12"
                     android:layout_marginRight="@dimen/dp16"
                     android:background="@color/gray_back"
-                    android:hint="@string/hint_birthday"
                     android:gravity="left|center"
-                    android:textSize="@dimen/sp12"
-                    android:paddingTop="@dimen/dp_4"
+                    android:hint="@string/profile_hint_birthday"
+                    android:paddingLeft="@dimen/dp10"
+                    android:paddingTop="@dimen/dp4"
+                    android:paddingRight="@dimen/dp10"
                     android:textColor="@color/gray_text"
-                    android:paddingRight="@dimen/dp_10"
-                    android:paddingLeft="@dimen/dp_10"
-                    />
+                    android:textSize="@dimen/sp14"
+                    android:textColorHint="@color/gray_hint"/>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_36"
+                android:layout_height="@dimen/dp36"
                 android:layout_marginTop="@dimen/dp14"
-                android:orientation="horizontal"
                 android:layout_marginBottom="@dimen/dp16"
-                >
+                android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="@dimen/dp_53"
+                    android:layout_width="@dimen/dp53"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/dp16"
                     android:gravity="left|center"
-                    android:text="@string/email"
-                    android:textSize="@dimen/dp12"
-                    />
+                    android:text="@string/profile_email"
+                    android:textSize="@dimen/dp14" />
 
-                <EditText
+
+
+        <EditText
                     android:id="@+id/et_email"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/dp12"
                     android:layout_marginRight="@dimen/dp16"
-                    android:hint="@string/hint_email"
+                    android:background="@color/gray_back"
+                    android:gravity="left|center"
+                    android:hint="@string/profile_hint_email"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
-                    android:gravity="left|center"
+                    android:paddingLeft="@dimen/dp10"
+                    android:paddingRight="@dimen/dp10"
                     android:textColor="@color/gray_text"
-                    android:textSize="@dimen/sp12"
-                    android:background="@color/gray_back"
-                    android:paddingLeft="@dimen/dp_10"
-                    android:paddingRight="@dimen/dp_10"/>
+                    android:textSize="@dimen/sp14"
+                    android:textColorHint="@color/gray_hint"/>
             </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>
@@ -163,36 +161,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dp16"
-        android:layout_marginRight="@dimen/dp16"
-        app:cardElevation="3dp"
-        >
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+        android:layout_marginRight="@dimen/dp16">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_44"
-                android:layout_marginTop="@dimen/dp_10"
+                android:layout_height="@dimen/dp44"
+                android:layout_marginTop="@dimen/dp10"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/dp_24"
-                    android:src="@drawable/icon_ic_scale"
-                    android:layout_gravity="center|left"/>
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="@dimen/dp24"
+                    android:src="@drawable/icon_ic_scale" />
 
                 <TextView
-                    android:layout_width="@dimen/dp_53"
+                    android:layout_width="@dimen/dp53"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/dp16"
-                    android:text="@string/weight"
                     android:gravity="left|center"
-                    android:textSize="@dimen/sp12"
-                    android:textStyle="bold"
-                    />
+                    android:text="@string/profile_weight"
+                    android:textSize="@dimen/sp14"
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -204,132 +200,132 @@
                         android:id="@+id/et_weight"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/dp_24"
+                        android:layout_marginLeft="@dimen/dp24"
                         android:background="@android:color/transparent"
-                        android:hint="0.0"
                         android:gravity="center"
+                        android:hint="0.0"
                         android:inputType="numberDecimal"
                         android:maxLines="1"
                         android:textColor="@color/gray_text"
-                        android:textSize="@dimen/sp12" />
+                        android:textColorHint="@color/gray_hint"
+                        android:textSize="@dimen/sp14" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/dp_10"
-                        android:layout_marginRight="@dimen/dp_24"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp24"
                         android:background="@android:color/transparent"
                         android:gravity="right|center"
                         android:inputType="numberDecimal"
                         android:maxLines="1"
                         android:text="kg"
-                        android:textSize="@dimen/sp12" />
+                        android:textSize="@dimen/sp14" />
 
                 </LinearLayout>
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_44"
-            android:layout_marginTop="@dimen/dp16"
-            android:orientation="vertical">
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="@dimen/dp44"
+                android:layout_marginTop="@dimen/dp16"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp24"
+                        android:src="@drawable/profile_ic_height" />
+
+                    <TextView
+                        android:layout_width="@dimen/dp53"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp16"
+                        android:gravity="left|center"
+                        android:text="@string/profile_height"
+                        android:textSize="@dimen/sp14"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right">
+
+                        <EditText
+                            android:id="@+id/et_height"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dp24"
+                            android:background="@android:color/transparent"
+                            android:hint="0"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1"
+                            android:textColorHint="@color/gray_hint"
+                            android:textColor="@color/gray_text"
+                            android:textSize="@dimen/sp14" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:layout_marginRight="@dimen/dp24"
+                            android:background="@android:color/transparent"
+                            android:gravity="center"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1"
+                            android:text="cm"
+                            android:textSize="@dimen/sp14"
+                            android:textColorHint="@color/gray_hint"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp44"
+                android:layout_marginTop="@dimen/dp16"
+                android:layout_marginBottom="@dimen/dp10"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/dp_24"
-                    android:src="@drawable/profile_ic_height" />
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp24"
+                    android:src="@drawable/profile_ic_gender" />
 
                 <TextView
-                    android:layout_width="@dimen/dp_53"
+                    android:layout_width="@dimen/dp53"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/dp16"
                     android:gravity="left|center"
-                    android:text="@string/height"
-                    android:textSize="@dimen/sp12"
-                    android:textStyle="bold"
-                    />
+                    android:text="Gender "
+                    android:textSize="@dimen/sp14"
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="right">
 
-                    <EditText
-                        android:id="@+id/et_height"
+                    <Spinner
+                        android:id="@+id/id_spanner"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/dp_24"
-                        android:background="@android:color/transparent"
-                        android:hint="0"
-                        android:inputType="numberDecimal"
-                        android:maxLines="1"
-                        android:textColor="@color/gray_text"
-                        android:textSize="@dimen/sp12" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/dp_10"
-                        android:layout_marginRight="@dimen/dp_24"
-                        android:background="@android:color/transparent"
-                        android:gravity="center"
-                        android:inputType="numberDecimal"
-                        android:maxLines="1"
-                        android:text="cm"
-                        android:textSize="@dimen/sp12" />
-
+                        android:layout_marginRight="@dimen/dp24"></Spinner>
                 </LinearLayout>
+
 
             </LinearLayout>
         </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_44"
-            android:layout_marginTop="@dimen/dp16"
-            android:orientation="horizontal"
-            android:layout_marginBottom="@dimen/dp_10">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/dp_24"
-                android:src="@drawable/profile_ic_gender" />
-
-            <TextView
-                android:layout_width="@dimen/dp_53"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/dp16"
-                android:gravity="left|center"
-                android:textSize="@dimen/sp12"
-                android:text="Gender "
-                android:textStyle="bold"
-                />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="right">
-
-                <Spinner
-                    android:id="@+id/id_spanner"
-                    android:layout_width="@dimen/dp_53"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="@dimen/dp_24"></Spinner>
-            </LinearLayout>
-
-
-    </LinearLayout>
-</LinearLayout>
     </android.support.v7.widget.CardView>
 
 
@@ -347,28 +343,45 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/ibm"
-                android:textSize="@dimen/sp12"/>
+                android:text="@string/profile_ibm"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/et_level"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp_10"
-                android:text="normal"
+                android:layout_marginLeft="@dimen/dp10"
                 android:textColor="@color/pink"
-                android:textSize="@dimen/sp12"/>
+                android:textSize="@dimen/sp14" />
         </LinearLayout>
-
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
         <TextView
             android:id="@+id/tv_ibm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp10"
             android:textColor="@color/pink"
-            android:textSize="@dimen/sp_50"
+            android:textSize="@dimen/sp50"
             android:textStyle="bold"
-            android:text="20.0"/>
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            tools:text="2.0" />
+    <TextView
+        android:id="@+id/tv_infor"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red_infor"
+        android:textSize="@dimen/sp12"
+        android:visibility="visible"
+        android:text="@string/profile_info"
+        />
+
+</FrameLayout>
     </LinearLayout>
 
 </LinearLayout>

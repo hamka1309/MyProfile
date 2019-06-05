@@ -17,11 +17,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_104"
+        android:layout_marginTop="@dimen/dp104"
         android:gravity="center"
-        android:text="@string/title"
+        android:text="@string/profile_title"
         android:textColor="@android:color/black"
-        android:textSize="@dimen/dp_24"
+        android:textSize="@dimen/dp24"
         android:textStyle="bold" />
 
     <Button
@@ -29,7 +29,7 @@
         android:id="@+id/bt_ok"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_53"
+        android:layout_marginTop="@dimen/dp53"
         android:background="@android:color/holo_blue_light"
-        android:text="@string/ok" />
+        android:text="@string/profile_ok" />
 </LinearLayout>

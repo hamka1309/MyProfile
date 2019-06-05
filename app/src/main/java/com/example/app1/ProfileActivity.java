@@ -17,7 +17,9 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -37,7 +39,6 @@ import com.bumptech.glide.Glide;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-
 import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -54,7 +55,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     private final String GENDER = "gender";
     private final String URI = "uri";
     private EditText etName, etEmail, etWeight, etHeight;
-    private TextView tvIBM, tvLevel, tvBirthDay;
+    private TextView tvIBM, tvLevel, tvBirthDay, tvInfor;
     private Spinner spinner;
     private ImageButton imageButtonImage1, imageButtonImage2;
     private String gender[] = {"Male", "Female"};
@@ -93,12 +94,93 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         etHeight = findViewById(R.id.et_height);
         tvIBM = findViewById(R.id.tv_ibm);
         spinner = findViewById(R.id.id_spanner);
+        tvInfor = findViewById(R.id.tv_infor);
         imageButtonImage1 = findViewById(R.id.image_button_image1);
         imageButtonImage2 = findViewById(R.id.image_button_image2);
         tvLevel = findViewById(R.id.et_level);
         tvIBM = findViewById(R.id.tv_ibm);
         imageButtonImage1.setOnClickListener(this);
         imageButtonImage2.setOnClickListener(this);
+
+        etEmail.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+//                if(checkEdit()==false)
+//                {
+//                    Toast.makeText(ProfileActivity.this,"Invalid email",Toast.LENGTH_SHORT).show();
+//                }
+            }
+        });
+        etWeight.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                if (count == 0) {
+                    tvInfor.setVisibility(View.VISIBLE);
+                    tvIBM.setVisibility(View.INVISIBLE);
+                    tvLevel.setVisibility(View.INVISIBLE);
+                    return;
+                }
+
+                if (checkIBM() == false && etHeight.equals("0")) {
+                    countIBM(Float.parseFloat(s.toString()), Float.parseFloat(etHeight.getText().toString()));
+                    tvInfor.setVisibility(View.GONE);
+                    tvIBM.setVisibility(View.VISIBLE);
+                    tvLevel.setVisibility(View.VISIBLE);
+                }
+
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+
+            }
+        });
+        etHeight.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                tvInfor.setVisibility(View.GONE);
+                tvIBM.setVisibility(View.VISIBLE);
+                if (count == 0) {
+                    tvInfor.setVisibility(View.VISIBLE);
+                    tvIBM.setVisibility(View.INVISIBLE);
+                    return;
+                } else {
+                    if (checkIBM() == false) {
+                        countIBM(Float.parseFloat(etHeight.getText().toString()), Float.parseFloat(s.toString()));
+                    }
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+
+            }
+        });
+
         tvBirthDay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -184,28 +266,28 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
             weight = etWeight.getText().toString();
             height = etHeight.getText().toString();
-
-            if (checkIBM()) {
-                w = Float.parseFloat(weight);
-                h = Float.parseFloat(height);
-                countIBM(w, h);
-
-                if (checkEdit()) {
-                    if (h != 0) {
-                        saveShare();
-                    } else {
-                        Toast.makeText(this, "Height cannot be entered by 0", Toast.LENGTH_SHORT).show();
-                    }
-
-                } else {
-                    Toast.makeText(this, "\n" +
-                            "Enter the wrong email or the name blank", Toast.LENGTH_SHORT).show();
-                }
-            } else {
-                Toast.makeText(this, "\n" +
-                        "Height and weight should not be left blank", Toast.LENGTH_SHORT).show();
-            }
-
+            saveShare();
+//            if (checkIBM()) {
+//                w = Float.parseFloat(weight);
+//                h = Float.parseFloat(height);
+//                countIBM(w, h);
+//
+//                if (checkEdit()) {
+//                    if (h != 0) {
+//                        saveShare();
+//                    } else {
+//                        Toast.makeText(this, "Height cannot be entered by 0", Toast.LENGTH_SHORT).show();
+//                    }
+//
+//                } else {
+//                    Toast.makeText(this, "\n" +
+//                            "Invalid email", Toast.LENGTH_SHORT).show();
+//                }
+//            } else {
+//                Toast.makeText(this, "\n" +
+//                        "Height and weight should not be left blank", Toast.LENGTH_SHORT).show();
+//            }
+//
         }
         return super.onOptionsItemSelected(item);
     }
@@ -266,17 +348,12 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         datePickerDialog.show();
     }
 
-    public boolean checkIBM() {
-        if (weight.equals("") || height.equals("")) {
-            return false;
-        }
-        return true;
-    }
 
     public void countIBM(float weight, float height) {
 
-        float index1 = (weight * 100 * 100 / height * height);
+        float index1 = ((weight * 100 * 100) / (height * height));
         float index = Math.round(index1 * 100) / 100;
+
         if (index < 18.5) {
             tvLevel.setText("Underweight");
             tvIBM.setText("" + index);
@@ -291,6 +368,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             tvIBM.setText("" + index);
         }
     }
+
 
     public void loadImg(Uri imageUri) {
         try {
@@ -340,6 +418,13 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
         if (checkIBM()) {
             countIBM(Float.parseFloat(weight), Float.parseFloat(height));
+            tvInfor.setVisibility(View.VISIBLE);
+            tvIBM.setVisibility(View.VISIBLE);
+            tvInfor.setVisibility(View.GONE);
+        } else {
+            tvInfor.setVisibility(View.GONE);
+            tvIBM.setVisibility(View.INVISIBLE);
+            tvInfor.setVisibility(View.VISIBLE);
         }
 
     }
@@ -347,9 +432,12 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     public boolean checkEdit() {
         final String email = etEmail.getText().toString().trim();
         final String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-        if (email.matches(emailPattern) || etName.getText().toString().equals("")) {
+        if (email.matches(emailPattern)) {
             return true;
-        } else return false;
+        } else if (email.equals("")) {
+            return true;
+        }
+        return false;
     }
 
     public void checkGender(String gt) {
@@ -369,4 +457,12 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         }
         return false;
     }
+
+    public boolean checkIBM() {
+        if (weight.equals("") || height.equals("")) {
+            return false;
+        }
+        return true;
+    }
+
 }
