@@ -400,12 +400,12 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         String gd = sharedPreferences.getString(GENDER, "");
         checkGender(gd);
 
-        if (checkIBM()) {
+        if (checkIBM1() &&Float.parseFloat(height)!=0) {
             countIBM(Float.parseFloat(weight), Float.parseFloat(height));
             tvIBM.setVisibility(View.VISIBLE);
             tvLevel.setVisibility(View.VISIBLE);
             tvInfor.setVisibility(View.GONE);
-        } else {
+        }else {
             tvLevel.setVisibility(View.GONE);
             tvIBM.setVisibility(View.INVISIBLE);
             tvInfor.setVisibility(View.VISIBLE);
@@ -442,6 +442,12 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
     public boolean checkIBM() {
         if (weight.equals("") || height.equals("")) {
+            return false;
+        }
+        return true;
+    }
+    public boolean checkIBM1() {
+        if (weight.equals("") || height.equals("") || height.equals("0")) {
             return false;
         }
         return true;
