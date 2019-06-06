@@ -353,7 +353,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dp10"
                 android:textColor="@color/pink"
-                android:textSize="@dimen/sp14" />
+                android:textSize="@dimen/sp14"
+                android:visibility="gone"
+                />
         </LinearLayout>
 <FrameLayout
     android:layout_width="match_parent"

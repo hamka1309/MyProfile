@@ -102,25 +102,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         imageButtonImage1.setOnClickListener(this);
         imageButtonImage2.setOnClickListener(this);
 
-        etEmail.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-//                if(checkEdit()==false)
-//                {
-//                    Toast.makeText(ProfileActivity.this,"Invalid email",Toast.LENGTH_SHORT).show();
-//                }
-            }
-        });
         etWeight.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -130,19 +112,33 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                if (count == 0) {
+
+
+                if (count == 0 || etHeight.getText().toString().equals("")||etHeight.getText().toString().equals("0")) {
                     tvInfor.setVisibility(View.VISIBLE);
                     tvIBM.setVisibility(View.INVISIBLE);
                     tvLevel.setVisibility(View.INVISIBLE);
                     return;
                 }
 
-                if (checkIBM() == false && etHeight.equals("0")) {
                     countIBM(Float.parseFloat(s.toString()), Float.parseFloat(etHeight.getText().toString()));
-                    tvInfor.setVisibility(View.GONE);
-                    tvIBM.setVisibility(View.VISIBLE);
-                    tvLevel.setVisibility(View.VISIBLE);
-                }
+                tvInfor.setVisibility(View.GONE);
+                tvIBM.setVisibility(View.VISIBLE);
+                tvLevel.setVisibility(View.VISIBLE);
+
+
+//
+//                if (checkIBM()==false ) {
+//                   // countIBM(Float.parseFloat(s.toString()), Float.parseFloat(etHeight.getText().toString()));
+//                    tvInfor.setVisibility(View.GONE);
+//                    tvIBM.setVisibility(View.VISIBLE);
+//                    tvLevel.setVisibility(View.VISIBLE);
+//                }
+//                else {
+//                    tvInfor.setVisibility(View.GONE);
+//                    tvIBM.setVisibility(View.VISIBLE);
+//                    tvLevel.setVisibility(View.VISIBLE);
+//                }
 
 
             }
@@ -163,15 +159,18 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 tvInfor.setVisibility(View.GONE);
                 tvIBM.setVisibility(View.VISIBLE);
-                if (count == 0) {
+                tvLevel.setVisibility(View.VISIBLE);
+                if (count == 0 || etWeight.getText().toString().equals("")) {
                     tvInfor.setVisibility(View.VISIBLE);
                     tvIBM.setVisibility(View.INVISIBLE);
+                    tvLevel.setVisibility(View.INVISIBLE);
                     return;
-                } else {
-                    if (checkIBM() == false) {
-                        countIBM(Float.parseFloat(etHeight.getText().toString()), Float.parseFloat(s.toString()));
-                    }
                 }
+                countIBM( Float.parseFloat(etWeight.getText().toString()),Float.parseFloat(s.toString()));
+                tvInfor.setVisibility(View.GONE);
+                tvIBM.setVisibility(View.VISIBLE);
+                tvLevel.setVisibility(View.VISIBLE);
+
             }
 
             @Override
@@ -267,27 +266,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             weight = etWeight.getText().toString();
             height = etHeight.getText().toString();
             saveShare();
-//            if (checkIBM()) {
-//                w = Float.parseFloat(weight);
-//                h = Float.parseFloat(height);
-//                countIBM(w, h);
-//
-//                if (checkEdit()) {
-//                    if (h != 0) {
-//                        saveShare();
-//                    } else {
-//                        Toast.makeText(this, "Height cannot be entered by 0", Toast.LENGTH_SHORT).show();
-//                    }
-//
-//                } else {
-//                    Toast.makeText(this, "\n" +
-//                            "Invalid email", Toast.LENGTH_SHORT).show();
-//                }
-//            } else {
-//                Toast.makeText(this, "\n" +
-//                        "Height and weight should not be left blank", Toast.LENGTH_SHORT).show();
-//            }
-//
+
         }
         return super.onOptionsItemSelected(item);
     }
@@ -389,7 +368,12 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     public void saveShare() {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(EMAIL, etEmail.getText().toString());
+        if(checkEdit())
+        {
+            editor.putString(EMAIL, etEmail.getText().toString());
+        }else {
+            Toast.makeText(this,"Invalided email",Toast.LENGTH_SHORT).show();
+        }
         editor.putString(NAME, etName.getText().toString());
         editor.putString(BIRTHDAY, tvBirthDay.getText().toString());
         editor.putString(HEIGHT, etHeight.getText().toString());
@@ -418,11 +402,11 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
         if (checkIBM()) {
             countIBM(Float.parseFloat(weight), Float.parseFloat(height));
-            tvInfor.setVisibility(View.VISIBLE);
             tvIBM.setVisibility(View.VISIBLE);
+            tvLevel.setVisibility(View.VISIBLE);
             tvInfor.setVisibility(View.GONE);
         } else {
-            tvInfor.setVisibility(View.GONE);
+            tvLevel.setVisibility(View.GONE);
             tvIBM.setVisibility(View.INVISIBLE);
             tvInfor.setVisibility(View.VISIBLE);
         }
@@ -432,9 +416,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     public boolean checkEdit() {
         final String email = etEmail.getText().toString().trim();
         final String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-        if (email.matches(emailPattern)) {
-            return true;
-        } else if (email.equals("")) {
+        if (email.matches(emailPattern) || email.matches("")) {
             return true;
         }
         return false;
