@@ -9,7 +9,7 @@
 
     <style name="TextAppearance.AppCompat.Widget.ActionBar.Title" parent="@android:style/TextAppearance">
         <item name="android:textColor">@color/title</item>
-
+        <item name="android:typeface">monospace</item>
     </style>
 
     <style name="AppThmeme.Base" parent="Theme.AppCompat.NoActionBar"></style>

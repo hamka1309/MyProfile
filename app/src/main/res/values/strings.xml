@@ -3,17 +3,19 @@
 
     <!--<editor-fold desc="PROFILE">-->
     <string name="profile_name">Name</string>
-    <string name="profile_hint_name">Enter Name</string>
+    <string name="profile_hint_name"><i>Example</i></string>
     <string name="profile_birthday">Birthday</string>
-    <string name="profile_hint_birthday">Choose Birthday</string>
+    <string name="profile_hint_birthday"><i>00/00/0000</i></string>
     <string name="profile_email">Email</string>
-    <string name="profile_hint_email">Enter Email</string>
+    <string name="profile_hint_email"><i>a@example.com</i></string>
     <string name="profile_weight">Weight</string>
     <string name="profile_height">Height</string>
     <string name="profile_ibm">Your IBM:</string>
     <string name="profile_ok">Oke</string>
     <string name="profile_title">My Profile</string>
     <string name="profile_info">Enter the height and weight to calculate IBM </string>
+    <string name="profile_hint_weight"><i>0.0</i></string>
+    <string name="profile_hint_height"><i>0</i></string>
     <!--</editor-fold>-->
 
 

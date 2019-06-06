@@ -15,7 +15,7 @@ import android.os.Bundle;
 
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-
+import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -64,7 +64,9 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     private String height;
     private final String TAG = "tag";
     private Toolbar toolbar;
-
+    static {
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -77,6 +79,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_chevron_left);
         initPermission();
         init();
         if (checkFileShare()) {
@@ -86,7 +89,6 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void init() {
-
         etName = findViewById(R.id.et_name);
         tvBirthDay = findViewById(R.id.tv_birthday);
         etEmail = findViewById(R.id.et_email);
@@ -102,50 +104,29 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         imageButtonImage1.setOnClickListener(this);
         imageButtonImage2.setOnClickListener(this);
 
-
         etWeight.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-
-
-                if (count == 0 || etHeight.getText().toString().equals("")||etHeight.getText().toString().equals("0")) {
+                count = countChar(s.toString());
+                Log.e(TAG, "onTextChanged: " + count);
+                if (count == 0 || etHeight.getText().toString().equals("") || etHeight.getText().toString().equals("0")) {
                     tvInfor.setVisibility(View.VISIBLE);
                     tvIBM.setVisibility(View.INVISIBLE);
                     tvLevel.setVisibility(View.INVISIBLE);
                     return;
                 }
-
-                    countIBM(Float.parseFloat(s.toString()), Float.parseFloat(etHeight.getText().toString()));
+                countIBM(Float.parseFloat(s.toString()), Float.parseFloat(etHeight.getText().toString()));
                 tvInfor.setVisibility(View.GONE);
                 tvIBM.setVisibility(View.VISIBLE);
                 tvLevel.setVisibility(View.VISIBLE);
-
-
-//
-//                if (checkIBM()==false ) {
-//                   // countIBM(Float.parseFloat(s.toString()), Float.parseFloat(etHeight.getText().toString()));
-//                    tvInfor.setVisibility(View.GONE);
-//                    tvIBM.setVisibility(View.VISIBLE);
-//                    tvLevel.setVisibility(View.VISIBLE);
-//                }
-//                else {
-//                    tvInfor.setVisibility(View.GONE);
-//                    tvIBM.setVisibility(View.VISIBLE);
-//                    tvLevel.setVisibility(View.VISIBLE);
-//                }
-
-
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-
 
             }
         });
@@ -157,26 +138,23 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                tvInfor.setVisibility(View.GONE);
-                tvIBM.setVisibility(View.VISIBLE);
-                tvLevel.setVisibility(View.VISIBLE);
-                if (count == 0 || etWeight.getText().toString().equals("")) {
+                count = countChar(s.toString());
+                Log.e(TAG, "onTextChanged: " + count);
+
+                if (count == 0 || etWeight.getText().toString().equals("") || s.toString().equals("0")) {
                     tvInfor.setVisibility(View.VISIBLE);
                     tvIBM.setVisibility(View.INVISIBLE);
                     tvLevel.setVisibility(View.INVISIBLE);
                     return;
                 }
-                countIBM( Float.parseFloat(etWeight.getText().toString()),Float.parseFloat(s.toString()));
+                countIBM(Float.parseFloat(etWeight.getText().toString()), Float.parseFloat(s.toString()));
                 tvInfor.setVisibility(View.GONE);
                 tvIBM.setVisibility(View.VISIBLE);
                 tvLevel.setVisibility(View.VISIBLE);
-
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-
-
             }
         });
 
@@ -188,12 +166,9 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         });
 
         ArrayAdapter<String> adapter;
-
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, gender);
-
         adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
         spinner.setAdapter(adapter);
-
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
@@ -203,7 +178,6 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
 
@@ -229,15 +203,12 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             uri = imageUri.toString();
             Toast.makeText(this, uri, Toast.LENGTH_LONG).show();
             try {
-
                 final InputStream imageStream = getContentResolver().openInputStream(imageUri);
                 final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
                 imageButtonImage1.setImageBitmap(selectedImage);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
-
             }
-
             Glide.with(this)
                     .load(imageUri)
                     .placeholder(R.drawable.ic_launcher_background)
@@ -257,16 +228,12 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        float w, h;
-
         if (id == android.R.id.home) {
             finish();
         } else {
-
             weight = etWeight.getText().toString();
             height = etHeight.getText().toString();
             saveShare();
-
         }
         return super.onOptionsItemSelected(item);
     }
@@ -274,14 +241,12 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     public void initPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-
                 if (shouldShowRequestPermissionRationale(
                         Manifest.permission.READ_EXTERNAL_STORAGE)) {
                     Toast.makeText(this, "Permission isn't granted ", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(this, "Permisson don't granted and dont show dialog again ", Toast.LENGTH_SHORT).show();
                 }
-
                 requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
             }
         }
@@ -298,9 +263,6 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             public void onDateSet(DatePicker view, int myear, int mmonth, int dayOfMonth) {
                 calendar.set(myear, mmonth, dayOfMonth);
                 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
-                Log.e(TAG, "onDateSet: " + myear + mmonth + dayOfMonth);
-                Log.e(TAG, "onDateSet: " + year + month + day);
-
                 if (year > myear) {
                     tvBirthDay.setText(simpleDateFormat.format(calendar.getTime()));
                 } else if (year == myear) {
@@ -321,7 +283,6 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                     Toast.makeText(ProfileActivity.this, "\n" +
                             "Can't choose a date in the future", Toast.LENGTH_SHORT).show();
                 }
-
             }
         }, year, month, day);
         datePickerDialog.show();
@@ -340,10 +301,10 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             tvLevel.setText("Normal");
             tvIBM.setText("" + index);
         } else if (23.0 <= index && index < 24.99) {
-            tvLevel.setText("overweight");
+            tvLevel.setText("Overweight");
             tvIBM.setText("" + index);
         } else if (index >= 25) {
-            tvLevel.setText("fat");
+            tvLevel.setText("Fat");
             tvIBM.setText("" + index);
         }
     }
@@ -368,11 +329,10 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     public void saveShare() {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        if(checkEdit())
-        {
+        if (checkEdit()) {
             editor.putString(EMAIL, etEmail.getText().toString());
-        }else {
-            Toast.makeText(this,"Invalided email",Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Invalided email", Toast.LENGTH_SHORT).show();
         }
         editor.putString(NAME, etName.getText().toString());
         editor.putString(BIRTHDAY, tvBirthDay.getText().toString());
@@ -386,7 +346,6 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     public void showShare() {
-
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
         weight = sharedPreferences.getString(WEIGHT, "");
         height = sharedPreferences.getString(HEIGHT, "");
@@ -400,12 +359,12 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         String gd = sharedPreferences.getString(GENDER, "");
         checkGender(gd);
 
-        if (checkIBM1() &&Float.parseFloat(height)!=0) {
+        if (checkIBM() && Float.parseFloat(height) != 0) {
             countIBM(Float.parseFloat(weight), Float.parseFloat(height));
             tvIBM.setVisibility(View.VISIBLE);
             tvLevel.setVisibility(View.VISIBLE);
             tvInfor.setVisibility(View.GONE);
-        }else {
+        } else {
             tvLevel.setVisibility(View.GONE);
             tvIBM.setVisibility(View.INVISIBLE);
             tvInfor.setVisibility(View.VISIBLE);
@@ -440,13 +399,12 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         return false;
     }
 
-    public boolean checkIBM() {
-        if (weight.equals("") || height.equals("")) {
-            return false;
-        }
-        return true;
+    public int countChar(String s) {
+        int count = s.length();
+        return count;
     }
-    public boolean checkIBM1() {
+
+    public boolean checkIBM() {
         if (weight.equals("") || height.equals("") || height.equals("0")) {
             return false;
         }
