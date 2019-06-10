@@ -23,12 +23,12 @@
     <string name="main_save_success">Save Success</string>
     <string name="main_error_email">Invalided email</string>
     <string name="main_error_permission">Permission isn\'t granted</string>
-    <string name="main_error_permission1">Permisson don\'t granted and dont show dialog again</string>
+    <string name="main_error_permission1">Permission don\'t granted and don\'t show dialog again</string>
     <string name="main_error_picture">You haven\'t picked Image</string>
     <string name="app_name">App1</string>
 
-    <string name="remider_repeat">Repeat</string>
-    <string name="profile_remider">Remider</string>
+    <string name="reminder_repeat">Repeat</string>
+    <string name="profile_reminder">Reminder</string>
 
 
 </resources>

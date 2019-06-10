@@ -27,6 +27,6 @@
     <string name="main_error_permission1">Permisson tidak diberikan dan tidak menunjukkan dialog lagi</string>
     <string name="main_error_picture">Anda belum memilih Imej</string>
 
-    <string name="remider_repeat">Repeat</string>
-    <string name="profile_remider">Remider</string>
+    <string name="reminder_repeat">Repeat</string>
+    <string name="profile_reminder">Remider</string>
 </resources>

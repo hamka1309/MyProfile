@@ -27,6 +27,6 @@
     <string name="main_error_permission1">पर्मिसन ने अनुमति नहीं दी और न ही फिर से डायलॉग दिखाएं</string>
     <string name="main_error_picture">आपने छवि नहीं चुनी है</string>
 
-    <string name="remider_repeat">Repeat</string>
-    <string name="profile_remider">Remider</string>
+    <string name="reminder_repeat">Repeat</string>
+    <string name="profile_reminder">Remider</string>
 </resources>

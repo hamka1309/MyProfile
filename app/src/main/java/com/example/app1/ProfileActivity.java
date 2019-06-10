@@ -79,7 +79,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         toolbar.setTitle(R.string.profile_title);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_chevron_left);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.profile_ic_arrow_left);
         initPermission();
         init();
         if (checkFileShare()) {

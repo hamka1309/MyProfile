@@ -27,6 +27,6 @@
     <string name="main_error_permission1">Permisson ne pas accorder et ne plus afficher le dialogue</string>
     <string name="main_error_picture">Vous n\'avez pas choisi Image</string>
 
-    <string name="remider_repeat">Repeat</string>
-    <string name="profile_remider">Remider</string>
+    <string name="reminder_repeat">Repeat</string>
+    <string name="profile_reminder">Remider</string>
 </resources>

@@ -40,7 +40,7 @@ private Toolbar toolbar;
                 startActivity(intent);
                 break;
             case R.id.bt_remider:
-                Intent intent1 = new Intent(MainActivity.this,RemiderActivity.class);
+                Intent intent1 = new Intent(MainActivity.this, ReminderActivity.class);
                 startActivity(intent1);
                 break;
         }

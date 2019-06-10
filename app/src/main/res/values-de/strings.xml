@@ -29,6 +29,6 @@
     <string name="main_error_permission1">Erlaubnis nicht erteilt und Dialog nicht mehr anzeigen</string>
     <string name="main_error_picture">Sie haben Image nicht ausgewählt</string>
 
-    <string name="remider_repeat">Repeat</string>
-    <string name="profile_remider">Remider</string>
+    <string name="reminder_repeat">Repeat</string>
+    <string name="profile_reminder">Remider</string>
 </resources>

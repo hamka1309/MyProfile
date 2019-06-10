@@ -27,6 +27,6 @@
     <string name="main_error_permission1">Permisson nie przyznał się i nie pokazuje ponownie okna dialogowego</string>
     <string name="main_error_picture">Nie wybrałeś obrazu</string>
 
-    <string name="remider_repeat">Repeat</string>
-    <string name="profile_remider">Remider</string>
+    <string name="reminder_repeat">Repeat</string>
+    <string name="profile_reminder">Remider</string>
 </resources>

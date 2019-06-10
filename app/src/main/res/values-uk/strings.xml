@@ -26,6 +26,6 @@
     <string name="main_error_permission1">Дозвіл не надано, а діалогове вікно знову не відображається</string>
     <string name="main_error_picture">Ви не вибрали Зображення</string>
 
-    <string name="remider_repeat">Repeat</string>
-    <string name="profile_remider">Remider</string>
+    <string name="reminder_repeat">Repeat</string>
+    <string name="profile_reminder">Remider</string>
 </resources>

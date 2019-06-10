@@ -27,6 +27,6 @@
     <string name="main_error_permission1">Permisson не предоставляется и не показывать диалог снова</string>
     <string name="main_error_picture">Вы не выбрали изображение</string>
 
-    <string name="remider_repeat">Repeat</string>
-    <string name="profile_remider">Remider</string>
+    <string name="reminder_repeat">Repeat</string>
+    <string name="profile_reminder">Remider</string>
 </resources>

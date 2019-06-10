@@ -39,5 +39,5 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp16"
         android:background="@android:color/holo_blue_light"
-        android:text="@string/profile_remider" />
+        android:text="@string/profile_reminder" />
 </LinearLayout>

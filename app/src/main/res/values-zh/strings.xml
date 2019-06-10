@@ -29,7 +29,7 @@
     <string name="main_error_permission1">不授予權限，也不再顯示對話框</string>
     <string name="main_error_picture">你還沒有選擇Image</string>
 
-    <string name="remider_repeat">Repeat</string>
-    <string name="profile_remider">Remider</string>
+    <string name="reminder_repeat">Repeat</string>
+    <string name="profile_reminder">Remider</string>
 
 </resources>

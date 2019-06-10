@@ -41,7 +41,7 @@
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/dp44"
             android:layout_marginTop="@dimen/dp44"
-           app:srcCompat="@drawable/avata_ic_camera"
+           app:srcCompat="@drawable/profile_ic_camera"
             tools:ignore="VectorDrawableCompat" />
     </FrameLayout>
 
@@ -178,7 +178,7 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center|left"
                     android:layout_marginLeft="@dimen/dp24"
-                    app:srcCompat="@drawable/ic_weight_scale"
+                    app:srcCompat="@drawable/profile_ic_weight"
                     tools:ignore="VectorDrawableCompat" />
 
                 <TextView
@@ -300,7 +300,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/dp24"
-                    app:srcCompat="@drawable/ic_profile_ic_gender"
+                    app:srcCompat="@drawable/profile_ic_gender"
                     tools:ignore="VectorDrawableCompat" />
 
                 <TextView

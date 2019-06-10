@@ -27,6 +27,6 @@
     <string name="main_error_permission1">การอนุญาตไม่ได้รับอนุญาตและอย่าแสดงข้อความโต้ตอบอีกครั้ง</string>
     <string name="main_error_picture">คุณยังไม่ได้เลือกภาพ</string>
 
-    <string name="remider_repeat">Repeat</string>
-    <string name="profile_remider">Remider</string>
+    <string name="reminder_repeat">Repeat</string>
+    <string name="profile_reminder">Remider</string>
 </resources>
