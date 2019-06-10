@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">App1</string>
+    <string name="profile_name">Name</string>
+    <string name="profile_hint_name"><i>Beispiel</i></string>
+    <string name="profile_birthday">Geburtstag</string>
+    <string name="profile_hint_birthday"><i>00/00/0000</i></string>
+    <string name="profile_email">Email</string>
+    <string name="profile_hint_email"><i>a@example.com</i></string>
+    <string name="profile_weight">Gewicht</string>
+    <string name="profile_height">Höhe</string>
+    <string name="profile_ibm">Ihre IBM:</string>
+    <string name="profile_ok">Oke</string>
+    <string name="profile_title">Mein Profil</string>
+    <string name="profile_info">Geben Sie die Größe und das Gewicht ein, um IBM zu berechnen </string>
+    <string name="profile_hint_weight"><i>0.0</i></string>
+    <string name="profile_hint_height"><i>0</i></string>
+    <string name="profile_gender">Geschlecht</string>
+    <string name="main_error_date">Ich kann kein Datum für die Zukunft auswählen</string>
+    <string name="main_lever_normal">Normal</string>
+
+    <string name="main_lever_underweight">Untergewicht</string>
+    <string name="main_lever_overweight">Übergewicht</string>
+    <string name="main_lever_fat">Fett</string>
+    <string name="main_save_success">Speichern Sie den Erfolg</string>
+    <string name="main_error_email">Ungültige eMail</string>
+    <string name="main_error_permission">Die Erlaubnis wird nicht erteilt</string>
+    <string name="main_error_permission1">Erlaubnis nicht erteilt und Dialog nicht mehr anzeigen</string>
+    <string name="main_error_picture">Sie haben Image nicht ausgewählt</string>
+
+    <string name="remider_repeat">Repeat</string>
+    <string name="profile_remider">Remider</string>
+</resources>

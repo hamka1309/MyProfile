@@ -32,4 +32,12 @@
         android:layout_marginTop="@dimen/dp53"
         android:background="@android:color/holo_blue_light"
         android:text="@string/profile_ok" />
+    <Button
+
+        android:id="@+id/bt_remider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp16"
+        android:background="@android:color/holo_blue_light"
+        android:text="@string/profile_remider" />
 </LinearLayout>

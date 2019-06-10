@@ -25,22 +25,24 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp150">
 
-        <
-            android:id="@+id/image_button_image1"
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_avatar"
             android:layout_width="@dimen/dp104"
             android:layout_height="@dimen/dp104"
             android:layout_gravity="center"
             android:background="@android:color/white"
-            android:src="@drawable/profile_ic_person" />
+            app:srcCompat="@drawable/profile_ic_person"
+            tools:ignore="VectorDrawableCompat" />
 
-        <ImageButton
-            android:id="@+id/image_button_image2"
-            android:layout_width="@dimen/dp24"
-            android:layout_height="@dimen/dp24"
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/dp44"
             android:layout_marginTop="@dimen/dp44"
-            android:src="@drawable/avata_ic_camera" />
+           app:srcCompat="@drawable/avata_ic_camera"
+            tools:ignore="VectorDrawableCompat" />
     </FrameLayout>
 
     <android.support.v7.widget.CardView
@@ -176,7 +178,8 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center|left"
                     android:layout_marginLeft="@dimen/dp24"
-                    app:srcCompat="@drawable/ic_weight_scale" />
+                    app:srcCompat="@drawable/ic_weight_scale"
+                    tools:ignore="VectorDrawableCompat" />
 
                 <TextView
                     android:layout_width="@dimen/dp53"
@@ -231,14 +234,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-
                     <android.support.v7.widget.AppCompatImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_marginLeft="@dimen/dp24"
                         app:srcCompat="@drawable/profile_ic_height"
-                        android:layout_gravity="center"
-                        />
+                        tools:ignore="VectorDrawableCompat" />
 
                     <TextView
                         android:layout_width="@dimen/dp53"
@@ -248,6 +250,8 @@
                         android:text="@string/profile_height"
                         android:textSize="@dimen/sp14"
                         android:textStyle="bold" />
+
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -296,14 +300,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/dp24"
-                    app:srcCompat="@drawable/ic_profile_ic_gender" />
+                    app:srcCompat="@drawable/ic_profile_ic_gender"
+                    tools:ignore="VectorDrawableCompat" />
 
                 <TextView
                     android:layout_width="@dimen/dp53"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/dp16"
                     android:gravity="left|center"
-                    android:text="Gender "
+                    android:text="@string/profile_gender"
                     android:textSize="@dimen/sp14"
                     android:textStyle="bold" />
 

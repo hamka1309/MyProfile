@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:text="TimePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginBottom="@dimen/dp10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/dp53"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp16"
+            android:gravity="left|center"
+            android:text="@string/remider_repeat"
+            android:textSize="@dimen/sp14"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingTop="@dimen/dp32"
+            >
+
+            <Spinner
+                android:id="@+id/id_spinner_repeat"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dp24"></Spinner>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

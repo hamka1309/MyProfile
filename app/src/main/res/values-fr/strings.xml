@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="profile_name">prénom</string>
+    <string name="app_name">App1</string>
+    <string name="profile_hint_name"><i>Exemple</i></string>
+    <string name="profile_birthday">Anniversaire</string>
+    <string name="profile_hint_birthday"><i>00/00/0000</i></string>
+    <string name="profile_email">Email</string>
+    <string name="profile_hint_email"><i>a@example.com</i></string>
+    <string name="profile_weight">Poids</string>
+    <string name="profile_height">la taille</string>
+    <string name="profile_ibm">Votre IBM:</string>
+    <string name="profile_ok">Oke</string>
+    <string name="profile_title">Mon profil</string>
+    <string name="profile_info">Entrez la taille et le poids pour calculer IBM </string>
+    <string name="profile_hint_weight"><i>0.0</i></string>
+    <string name="profile_hint_height"><i>0</i></string>
+    <string name="profile_gender">Le sexe</string>
+    <string name="main_error_date">Impossible de choisir une date dans le futur</string>
+    <string name="main_lever_normal">Ordinaire</string>
+
+    <string name="main_lever_underweight">Poids insuffisant</string>
+    <string name="main_lever_overweight">en surpoids</string>
+    <string name="main_lever_fat">Graisse</string>
+    <string name="main_save_success">Sauver le succès</string>
+    <string name="main_error_email">Email invalide</string>
+    <string name="main_error_permission">L\'autorisation n\'est pas accordée</string>
+    <string name="main_error_permission1">Permisson ne pas accorder et ne plus afficher le dialogue</string>
+    <string name="main_error_picture">Vous n\'avez pas choisi Image</string>
+
+    <string name="remider_repeat">Repeat</string>
+    <string name="profile_remider">Remider</string>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="profile_name">Nome</string>
+    <string name="app_name">App1</string>
+    <string name="profile_hint_name"><i>Exemplo</i></string>
+    <string name="profile_birthday">Aniversário</string>
+    <string name="profile_hint_birthday"><i>00/00/0000</i></string>
+    <string name="profile_email">Email</string>
+    <string name="profile_hint_email"><i>a@example.com</i></string>
+    <string name="profile_weight">Peso</string>
+    <string name="profile_height">Altura</string>
+    <string name="profile_ibm">Sua IBM:</string>
+    <string name="profile_ok">Oke</string>
+    <string name="profile_title">Meu perfil</string>
+    <string name="profile_info">Insira a altura e o peso para calcular o IBM </string>
+    <string name="profile_hint_weight"><i>0.0</i></string>
+    <string name="profile_hint_height"><i>0</i></string>
+    <string name="profile_gender">Gênero</string>
+    <string name="main_error_date">Não pode escolher uma data no futuro</string>
+    <string name="main_lever_normal">Normal</string>
+
+    <string name="main_lever_underweight">Abaixo do peso</string>
+    <string name="main_lever_overweight">Excesso de peso</string>
+    <string name="main_lever_fat">Gordura</string>
+    <string name="main_save_success">Salvar o sucesso</string>
+    <string name="main_error_email">E-mail inválido</string>
+    <string name="main_error_permission">A permissão não é concedida</string>
+    <string name="main_error_permission1">Permisson não concede e não mostra o diálogo novamente</string>
+    <string name="main_error_picture">Você não escolheu Image</string>
+
+    <string name="remider_repeat">Repeat</string>
+    <string name="profile_remider">Remider</string>
+</resources>

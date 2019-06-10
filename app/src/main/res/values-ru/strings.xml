@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="profile_name">название</string>
+    <string name="app_name">App1</string>
+    <string name="profile_hint_name"><i>пример</i></string>
+    <string name="profile_birthday">день рождения</string>
+    <string name="profile_hint_birthday"><i>00/00/0000</i></string>
+    <string name="profile_email">Email</string>
+    <string name="profile_hint_email"><i>a@example.com</i></string>
+    <string name="profile_weight">Вес</string>
+    <string name="profile_height">Рост</string>
+    <string name="profile_ibm">Ваш IBM:</string>
+    <string name="profile_ok">Oke</string>
+    <string name="profile_title">Мой профайл</string>
+    <string name="profile_info">Введите рост и вес для расчета IBM </string>
+    <string name="profile_hint_weight"><i>0.0</i></string>
+    <string name="profile_hint_height"><i>0</i></string>
+    <string name="profile_gender">Пол</string>
+    <string name="main_error_date">Не могу выбрать дату в будущем</string>
+    <string name="main_lever_normal">Нормальный</string>
+
+    <string name="main_lever_underweight">недовес</string>
+    <string name="main_lever_overweight">избыточный вес</string>
+    <string name="main_lever_fat">Жир</string>
+    <string name="main_save_success">Сохранить успех</string>
+    <string name="main_error_email">Неверный адрес электронной почты</string>
+    <string name="main_error_permission">Разрешение не предоставлено</string>
+    <string name="main_error_permission1">Permisson не предоставляется и не показывать диалог снова</string>
+    <string name="main_error_picture">Вы не выбрали изображение</string>
+
+    <string name="remider_repeat">Repeat</string>
+    <string name="profile_remider">Remider</string>
+</resources>

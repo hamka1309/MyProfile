@@ -12,7 +12,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-private Button btOk;
+private Button btOk, btRemider;
 private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,18 +21,29 @@ private Toolbar toolbar;
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_main);
-
+        btRemider=findViewById(R.id.bt_remider);
+        btRemider.setOnClickListener(this);
         btOk= findViewById(R.id.bt_ok);
         btOk.setOnClickListener(this);
 
         toolbar= findViewById(R.id.toobal);
-        toolbar.setTitle("My profile");
+        toolbar.setTitle(R.string.profile_title);
 
     }
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(MainActivity.this,ProfileActivity.class);
-        startActivity(intent);
+        switch (v.getId())
+        {
+            case R.id.bt_ok:
+                Intent intent = new Intent(MainActivity.this,ProfileActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.bt_remider:
+                Intent intent1 = new Intent(MainActivity.this,RemiderActivity.class);
+                startActivity(intent1);
+                break;
+        }
+
     }
 }

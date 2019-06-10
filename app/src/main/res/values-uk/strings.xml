@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="profile_name">Ім\'я</string>
+    <string name="app_name">App1</string>
+    <string name="profile_hint_name"><i>Приклад</i></string>
+    <string name="profile_birthday">День народження</string>
+    <string name="profile_hint_birthday"><i>00/00/0000</i></string>
+    <string name="profile_email">Email</string>
+    <string name="profile_hint_email"><i>a@example.com</i></string>
+    <string name="profile_weight">Вага</string>
+    <string name="profile_height">Висота</string>
+    <string name="profile_ibm">Ваш IBM:</string>
+    <string name="profile_ok">Oke</string>
+    <string name="profile_title">Мій профіль</string>
+    <string name="profile_info">Введіть висоту і вагу для обчислення IBM</string>
+    <string name="profile_hint_weight"><i>0.0</i></string>
+    <string name="profile_hint_height"><i>0</i></string>
+    <string name="profile_gender">Стать</string>
+    <string name="main_error_date">У майбутньому неможливо вибрати дату</string>
+    <string name="main_lever_normal">Звичайний</string>
+    <string name="main_lever_underweight">Вага</string>
+    <string name="main_lever_overweight">Надмірна вага</string>
+    <string name="main_lever_fat">Жир</string>
+    <string name="main_save_success">Зберегти успіх</string>
+    <string name="main_error_email">Електронна пошта</string>
+    <string name="main_error_permission">Дозвіл не надано</string>
+    <string name="main_error_permission1">Дозвіл не надано, а діалогове вікно знову не відображається</string>
+    <string name="main_error_picture">Ви не вибрали Зображення</string>
+
+    <string name="remider_repeat">Repeat</string>
+    <string name="profile_remider">Remider</string>
+</resources>

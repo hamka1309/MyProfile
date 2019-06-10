@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="profile_name">Nome</string>
+    <string name="app_name">App1</string>
+    <string name="profile_hint_name"><i>Esempio</i></string>
+    <string name="profile_birthday">Compleanno</string>
+    <string name="profile_hint_birthday"><i>00/00/0000</i></string>
+    <string name="profile_email">Email</string>
+    <string name="profile_hint_email"><i>a@example.com</i></string>
+    <string name="profile_weight">Peso</string>
+    <string name="profile_height">Altezza</string>
+    <string name="profile_ibm">Il tuo IBM:</string>
+    <string name="profile_ok">Oke</string>
+    <string name="profile_title">Il mio profilo</string>
+    <string name="profile_info">Immettere l\'altezza e il peso per calcolare IBM </string>
+    <string name="profile_hint_weight"><i>0.0</i></string>
+    <string name="profile_hint_height"><i>0</i></string>
+    <string name="profile_gender">Genere</string>
+    <string name="main_error_date">Non posso scegliere una data in futuro</string>
+    <string name="main_lever_normal">Normale</string>
+
+    <string name="main_lever_underweight">Sottopeso</string>
+    <string name="main_lever_overweight">Sovrappeso</string>
+    <string name="main_lever_fat">Grasso</string>
+    <string name="main_save_success">Salva successo</string>
+    <string name="main_error_email">Email invalida</string>
+    <string name="main_error_permission">L\'autorizzazione non è garantita</string>
+    <string name="main_error_permission1">Permisson non è concesso e non mostra più la finestra di dialogo</string>
+    <string name="main_error_picture">Non hai scelto l\'immagine</string>
+
+    <string name="remider_repeat">Repeat</string>
+    <string name="profile_remider">Remider</string>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="profile_name">नाम</string>
+    <string name="app_name">App1</string>
+    <string name="profile_hint_name"><i>उदाहरणe</i></string>
+    <string name="profile_birthday">जन्मदिन</string>
+    <string name="profile_hint_birthday"><i>00/00/0000</i></string>
+    <string name="profile_email">Email</string>
+    <string name="profile_hint_email"><i>a@example.com</i></string>
+    <string name="profile_weight">वजन</string>
+    <string name="profile_height">ऊंचाई</string>
+    <string name="profile_ibm">आपका IBM:</string>
+    <string name="profile_ok">Oke</string>
+    <string name="profile_title">मेरी प्रोफाइल</string>
+    <string name="profile_info">आईबीएम की गणना करने के लिए ऊंचाई और वजन दर्ज करें</string>
+    <string name="profile_hint_weight"><i>0.0</i></string>
+    <string name="profile_hint_height"><i>0</i></string>
+    <string name="profile_gender">लिंग</string>
+    <string name="main_error_date">भविष्य में कोई तिथि नहीं चुन सकते</string>
+    <string name="main_lever_normal">साधारण</string>
+
+    <string name="main_lever_underweight">वजन</string>
+    <string name="main_lever_overweight">अधिक वजन</string>
+    <string name="main_lever_fat">मोटी</string>
+    <string name="main_save_success">सफलता बचाओ</string>
+    <string name="main_error_email">अवैध ईमेल</string>
+    <string name="main_error_permission">अनुमति नहीं दी गई है</string>
+    <string name="main_error_permission1">पर्मिसन ने अनुमति नहीं दी और न ही फिर से डायलॉग दिखाएं</string>
+    <string name="main_error_picture">आपने छवि नहीं चुनी है</string>
+
+    <string name="remider_repeat">Repeat</string>
+    <string name="profile_remider">Remider</string>
+</resources>

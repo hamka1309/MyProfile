@@ -30,7 +30,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -57,7 +57,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     private EditText etName, etEmail, etWeight, etHeight;
     private TextView tvIBM, tvLevel, tvBirthDay, tvInfor;
     private Spinner spinner;
-    private ImageButton imageButtonImage1, imageButtonImage2;
+    private ImageView ivAvatar, ivCamera;
     private String gender[] = {"Male", "Female"};
     private String uri;
     private String weight;
@@ -75,8 +75,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_profile);
         toolbar = findViewById(R.id.toobal1);
-        toolbar.setTitle("My profile");
         setSupportActionBar(toolbar);
+        toolbar.setTitle(R.string.profile_title);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_chevron_left);
@@ -97,12 +97,12 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         tvIBM = findViewById(R.id.tv_ibm);
         spinner = findViewById(R.id.id_spanner);
         tvInfor = findViewById(R.id.tv_infor);
-        imageButtonImage1 = findViewById(R.id.image_button_image1);
-        imageButtonImage2 = findViewById(R.id.image_button_image2);
+        ivAvatar = findViewById(R.id.iv_avatar);
+        ivCamera = findViewById(R.id.iv_camera);
         tvLevel = findViewById(R.id.et_level);
         tvIBM = findViewById(R.id.tv_ibm);
-        imageButtonImage1.setOnClickListener(this);
-        imageButtonImage2.setOnClickListener(this);
+        ivAvatar.setOnClickListener(this);
+        ivCamera.setOnClickListener(this);
 
         etWeight.addTextChangedListener(new TextWatcher() {
             @Override
@@ -139,8 +139,6 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 count = countChar(s.toString());
-                Log.e(TAG, "onTextChanged: " + count);
-
                 if (count == 0 || etWeight.getText().toString().equals("") || s.toString().equals("0")) {
                     tvInfor.setVisibility(View.VISIBLE);
                     tvIBM.setVisibility(View.INVISIBLE);
@@ -186,8 +184,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.image_button_image1:
-            case R.id.image_button_image2:
+            case R.id.iv_avatar:
+            case R.id.iv_camera:
                 Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
                 photoPickerIntent.setType("image/*");
                 startActivityForResult(photoPickerIntent, RESULT_LOAD_IMG);
@@ -205,7 +203,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             try {
                 final InputStream imageStream = getContentResolver().openInputStream(imageUri);
                 final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
-                imageButtonImage1.setImageBitmap(selectedImage);
+              ivAvatar.setImageBitmap(selectedImage);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -213,10 +211,10 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                     .load(imageUri)
                     .placeholder(R.drawable.ic_launcher_background)
                     .error(R.drawable.ic_launcher_background)
-                    .into(imageButtonImage1);
+                    .into(ivAvatar);
         } else {
-            Toast.makeText(this, "You haven't picked Image", Toast.LENGTH_LONG).show();
         }
+        Toast.makeText(this, R.string.main_error_picture, Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -243,10 +241,10 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                 if (shouldShowRequestPermissionRationale(
                         Manifest.permission.READ_EXTERNAL_STORAGE)) {
-                    Toast.makeText(this, "Permission isn't granted ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this,  R.string.main_error_permission, Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(this, "Permisson don't granted and dont show dialog again ", Toast.LENGTH_SHORT).show();
                 }
+                Toast.makeText(this,  R.string.main_error_permission1, Toast.LENGTH_SHORT).show();
                 requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
             }
         }
@@ -273,15 +271,15 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                             tvBirthDay.setText(simpleDateFormat.format(calendar.getTime()));
                         } else {
                             Toast.makeText(ProfileActivity.this, "\n" +
-                                    "Can't choose a date in the future", Toast.LENGTH_SHORT).show();
+                                    R.string.main_error_date, Toast.LENGTH_SHORT).show();
                         }
                     } else {
                         Toast.makeText(ProfileActivity.this, "\n" +
-                                "Can't choose a date in the future", Toast.LENGTH_SHORT).show();
+                                R.string.main_error_date, Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     Toast.makeText(ProfileActivity.this, "\n" +
-                            "Can't choose a date in the future", Toast.LENGTH_SHORT).show();
+                            R.string.main_error_date, Toast.LENGTH_SHORT).show();
                 }
             }
         }, year, month, day);
@@ -295,16 +293,16 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         float index = Math.round(index1 * 100) / 100;
 
         if (index < 18.5) {
-            tvLevel.setText("Underweight");
+            tvLevel.setText(R.string.main_lever_underweight);
             tvIBM.setText("" + index);
         } else if (18.5 <= index && index < 22.99) {
-            tvLevel.setText("Normal");
+            tvLevel.setText(R.string.main_lever_normal);
             tvIBM.setText("" + index);
         } else if (23.0 <= index && index < 24.99) {
-            tvLevel.setText("Overweight");
+            tvLevel.setText(R.string.main_lever_overweight);
             tvIBM.setText("" + index);
         } else if (index >= 25) {
-            tvLevel.setText("Fat");
+            tvLevel.setText(R.string.main_lever_fat);
             tvIBM.setText("" + index);
         }
     }
@@ -314,7 +312,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         try {
             final InputStream imageStream = getContentResolver().openInputStream(imageUri);
             final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
-            imageButtonImage1.setImageBitmap(selectedImage);
+            ivAvatar.setImageBitmap(selectedImage);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -323,7 +321,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                 .load(imageUri)
                 .placeholder(R.drawable.ic_launcher_background)
                 .error(R.drawable.ic_launcher_background)
-                .into(imageButtonImage1);
+                .into(ivAvatar);
     }
 
     public void saveShare() {
@@ -332,14 +330,14 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         if (checkEdit()) {
             editor.putString(EMAIL, etEmail.getText().toString());
         } else {
-            Toast.makeText(this, "Invalided email", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.main_error_email, Toast.LENGTH_SHORT).show();
         }
         editor.putString(NAME, etName.getText().toString());
         editor.putString(BIRTHDAY, tvBirthDay.getText().toString());
         editor.putString(HEIGHT, etHeight.getText().toString());
         editor.putString(WEIGHT, etWeight.getText().toString());
         editor.putString(GENDER, spinner.getSelectedItem().toString());
-        Toast.makeText(this, "Save Success", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, R.string.main_save_success, Toast.LENGTH_LONG).show();
         editor.putString(URI, uri);
         editor.apply();
 

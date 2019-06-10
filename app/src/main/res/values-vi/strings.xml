@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="profile_name">Tên</string>
+    <string name="app_name">App1</string>
+    <string name="profile_hint_name"><i>tên</i></string>
+    <string name="profile_birthday">Ngày sinh</string>
+    <string name="profile_hint_birthday"><i>00/00/0000</i></string>
+    <string name="profile_email">Email</string>
+    <string name="profile_hint_email"><i>a@example.com</i></string>
+    <string name="profile_weight">Cân nặng</string>
+    <string name="profile_height">Chiều cao</string>
+    <string name="profile_ibm">IBM của bạn:</string>
+    <string name="profile_ok">Chọn</string>
+    <string name="profile_title">Thông tin của bạn</string>
+    <string name="profile_info">Nhập chiều cao và cân nặng để tính IBM</string>
+    <string name="profile_hint_weight"><i>0.0</i></string>
+    <string name="profile_hint_height"><i>0</i></string>
+    <string name="profile_gender">Giới tính</string>
+    <string name="main_lever_normal">Bình thường</string>
+    <string name="main_error_date">Bạn không thể chọn ngày trong tương lại</string>
+    <string name="main_lever_underweight">Thiếu cân</string>
+    <string name="main_lever_overweight">Thừa cân</string>
+    <string name="main_lever_fat">Béo</string>
+    <string name="main_save_success">Lưu thành công</string>
+    <string name="main_error_email">Không tồn tại email</string>
+    <string name="main_error_permission">Chưa được cấp quyền</string>
+    <string name="main_error_permission1">Chưa được cấp quyền và không hiển thị lại hộp thoại</string>
+    <string name="main_error_picture">Bạn chưa chọn hình ảnh</string>
+
+    <string name="remider_repeat">Repeat</string>
+    <string name="profile_remider">Remider</string>
+</resources>

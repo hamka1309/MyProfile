@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="profile_name">Imię</string>
+    <string name="app_name">App1</string>
+    <string name="profile_hint_name"><i>Przykład</i></string>
+    <string name="profile_birthday">Urodziny</string>
+    <string name="profile_hint_birthday"><i>00/00/0000</i></string>
+    <string name="profile_email">Email</string>
+    <string name="profile_hint_email"><i>a@example.com</i></string>
+    <string name="profile_weight">Waga</string>
+    <string name="profile_height">Wysokość</string>
+    <string name="profile_ibm">Twój IBM:</string>
+    <string name="profile_ok">Oke</string>
+    <string name="profile_title">Mój profil</string>
+    <string name="profile_info">Wprowadź wysokość i wagę, aby obliczyć IBM </string>
+    <string name="profile_hint_weight"><i>0.0</i></string>
+    <string name="profile_hint_height"><i>0</i></string>
+    <string name="profile_gender">Płeć</string>
+    <string name="main_error_date">Nie mogę wybrać daty w przyszłości</string>
+    <string name="main_lever_normal">Normalna</string>
+
+    <string name="main_lever_underweight">Niedowaga</string>
+    <string name="main_lever_overweight">Nadwaga</string>
+    <string name="main_lever_fat">Tłuszcz</string>
+    <string name="main_save_success">Oszczędzaj sukces</string>
+    <string name="main_error_email">Nieprawidłowy e-mail</string>
+    <string name="main_error_permission">Pozwolenie nie jest udzielane</string>
+    <string name="main_error_permission1">Permisson nie przyznał się i nie pokazuje ponownie okna dialogowego</string>
+    <string name="main_error_picture">Nie wybrałeś obrazu</string>
+
+    <string name="remider_repeat">Repeat</string>
+    <string name="profile_remider">Remider</string>
+</resources>

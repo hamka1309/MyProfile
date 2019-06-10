@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="profile_name">isim</string>
+    <string name="app_name">App1</string>
+    <string name="profile_hint_name"><i>Örnek</i></string>
+    <string name="profile_birthday">Doğum günü</string>
+    <string name="profile_hint_birthday"><i>00/00/0000</i></string>
+    <string name="profile_email">Email</string>
+    <string name="profile_hint_email"><i>a@example.com</i></string>
+    <string name="profile_weight">Ağırlık</string>
+    <string name="profile_height">Yükseklik</string>
+    <string name="profile_ibm">IBM\'iniz:</string>
+    <string name="profile_ok">Oke</string>
+    <string name="profile_title">Benim profilim</string>
+    <string name="profile_info">IBM\'i hesaplamak için boy ve kiloyu girin</string>
+    <string name="profile_hint_weight"><i>0.0</i></string>
+    <string name="profile_hint_height"><i>0</i></string>
+    <string name="profile_gender">Cinsiyet</string>
+    <string name="main_error_date">Gelecekte bir tarih seçemiyorum</string>
+    <string name="main_lever_normal">Normal</string>
+
+    <string name="main_lever_underweight">normalden hafif</string>
+    <string name="main_lever_overweight">Kilolu</string>
+    <string name="main_lever_fat">Şişman</string>
+    <string name="main_save_success">Başarıyı Kaydet</string>
+    <string name="main_error_email">Geçersiz e-posta</string>
+    <string name="main_error_permission">İzin verilmemiştir</string>
+    <string name="main_error_permission1">İzin verilmez ve bir daha diyalog gösterilmez</string>
+    <string name="main_error_picture">Resim seçmediniz</string>
+
+    <string name="remider_repeat">Repeat</string>
+    <string name="profile_remider">Remider</string>
+</resources>

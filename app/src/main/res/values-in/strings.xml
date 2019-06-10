@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="profile_name">nama</string>
+    <string name="app_name">App1</string>
+    <string name="profile_hint_name"><i>Contoh</i></string>
+    <string name="profile_birthday">Ulang tahun</string>
+    <string name="profile_hint_birthday"><i>00/00/0000</i></string>
+    <string name="profile_email">Email</string>
+    <string name="profile_hint_email"><i>a@example.com</i></string>
+    <string name="profile_weight">Berat</string>
+    <string name="profile_height">Tinggi</string>
+    <string name="profile_ibm">IBM Anda:</string>
+    <string name="profile_ok">Oke</string>
+    <string name="profile_title">Profil saya</string>
+    <string name="profile_info">Tidak dapat memilih tanggal di masa mendatangEnter the height and weight to calculate IBM </string>
+    <string name="profile_hint_weight"><i>0.0</i></string>
+    <string name="profile_hint_height"><i>0</i></string>
+    <string name="profile_gender">Gender</string>
+    <string name="main_error_date">Can\'t choose a date in the future</string>
+    <string name="main_lever_normal">Normal</string>
+    <string name="main_lever_underweight">Kurang berat</string>
+    <string name="main_lever_overweight">Kegemukan</string>
+    <string name="main_lever_fat">Lemak</string>
+    <string name="main_save_success">Simpan Sukses</string>
+    <string name="main_error_email">Email tidak valid</string>
+    <string name="main_error_permission">Izin tidak diberikan</string>
+    <string name="main_error_permission1">Permisson tidak dikabulkan dan jangan tampilkan dialog lagi</string>
+    <string name="main_error_picture">Anda belum memilih Gambar</string>
+
+    <string name="remider_repeat">Repeat</string>
+    <string name="profile_remider">Remider</string>
+</resources>

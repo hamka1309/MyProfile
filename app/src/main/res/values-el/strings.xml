@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="profile_name">όνομα</string>
+    <string name="app_name">App1</string>
+    <string name="profile_hint_name"><i>Παράδειγμα</i></string>
+    <string name="profile_birthday">Γενέθλια</string>
+    <string name="profile_hint_birthday"><i>00/00/0000</i></string>
+    <string name="profile_email">Email</string>
+    <string name="profile_hint_email"><i>a@example.com</i></string>
+    <string name="profile_weight">Βάρος</string>
+    <string name="profile_height">Υψος</string>
+    <string name="profile_ibm">Η IBM σας:</string>
+    <string name="profile_ok">Oke</string>
+    <string name="profile_title">Το ΠΡΟΦΙΛ μου</string>
+    <string name="profile_info">Καταχωρίστε το ύψος και το βάρος για να υπολογίσετε την IBM </string>
+    <string name="profile_hint_weight"><i>0.0</i></string>
+    <string name="profile_hint_height"><i>0</i></string>
+    <string name="profile_gender">Γένος</string>
+    <string name="main_error_date">Δεν είναι δυνατή η επιλογή ημερομηνίας στο μέλλον</string>
+    <string name="main_lever_normal">Κανονικός</string>
+    <string name="main_lever_underweight">Λιποβαρής</string>
+    <string name="main_lever_overweight">Υπέρβαρος</string>
+    <string name="main_lever_fat">Λίπος</string>
+    <string name="main_save_success">Αποθήκευση επιτυχίας</string>
+    <string name="main_error_email">Μη έγκυρο μήνυμα ηλεκτρονικού ταχυδρομείου</string>
+    <string name="main_error_permission">Η άδεια δεν χορηγείται</string>
+    <string name="main_error_permission1">Δεν επιτρέπεται η άδεια και δεν εμφανίζεται ξανά το παράθυρο διαλόγου</string>
+    <string name="main_error_picture">Δεν έχετε επιλέξει την εικόνα</string>
+
+    <string name="remider_repeat">Repeat</string>
+    <string name="profile_remider">Remider</string>
+</resources>

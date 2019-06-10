@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources><string name="profile_name">名稱</string>
+    <string name="app_name">App1</string>
+    <string name="profile_hint_name"><i>例</i></string>
+    <string name="profile_birthday">生日</string>
+    <string name="profile_hint_birthday"><i>00/00/0000</i></string>
+    <string name="profile_email">Email</string>
+    <string name="profile_hint_email"><i>a@example.com</i></string>
+    <string name="profile_weight">重量</string>
+    <string name="profile_height">高度</string>
+    <string name="profile_ibm">你的IBM：</string>
+    <string name="profile_ok">Oke</string>
+    <string name="profile_title">我的簡歷</string>
+    <string name="profile_info">輸入高度和重量以計算IBM</string>
+    <string name="profile_hint_weight"><i>0.0</i></string>
+    <string name="profile_hint_height"><i>0</i></string>
+    <string name="profile_gender">性別</string>
+
+
+    <string name="main_error_date">將來無法選擇日期</string>
+    <string name="main_lever_normal">正常</string>
+    <string name="main_lever_underweight">減持</string>
+    <string name="main_lever_overweight">超重</string>
+    <string name="main_lever_fat">脂肪</string>
+    <string name="main_save_success">節省成功</string>
+    <string name="main_error_email">無效的電子郵件</string>
+    <string name="main_error_permission">許可不被授予</string>
+    <string name="main_error_permission1">不授予權限，也不再顯示對話框</string>
+    <string name="main_error_picture">你還沒有選擇Image</string>
+
+    <string name="remider_repeat">Repeat</string>
+    <string name="profile_remider">Remider</string>
+
+</resources>

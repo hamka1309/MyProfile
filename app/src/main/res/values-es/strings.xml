@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="profile_name">ном</string>
+    <string name="app_name">App1</string>
+    <string name="profile_hint_name"><i>Мисол</i></string>
+    <string name="profile_birthday">Зодрӯз</string>
+    <string name="profile_hint_birthday"><i>00/00/0000</i></string>
+    <string name="profile_email">Email</string>
+    <string name="profile_hint_email"><i>a@example.com</i></string>
+    <string name="profile_weight">Вазн</string>
+    <string name="profile_height">Баландӣ</string>
+    <string name="profile_ibm">IBM шумо:</string>
+    <string name="profile_ok">Oke</string>
+    <string name="profile_title">Профили ман</string>
+    <string name="profile_info">Бистарӣ ва вазнро ба ҳисоби IBM ҳисоб кунед </string>
+    <string name="profile_hint_weight"><i>0.0</i></string>
+    <string name="profile_hint_height"><i>0</i></string>
+    <string name="profile_gender">Гендер</string>
+    <string name="main_error_date">Дар оянда дар оянда интихоб карда наметавонед </string>
+    <string name="main_lever_normal">Normal</string>
+
+    <string name="main_lever_underweight">Фурӯтанӣ</string>
+    <string name="main_lever_overweight">Зарур аст</string>
+    <string name="main_lever_fat">Fat</string>
+    <string name="main_save_success">Save Success</string>
+    <string name="main_error_email">Почтаи номаълум</string>
+    <string name="main_error_permission">Иҷозат иҷозат дода намешавад</string>
+    <string name="main_error_permission1">Permisson боз муколамаро намоиш дода натавонистааст</string>
+    <string name="main_error_picture">Шумо на тасвир гирифтаед</string>
+
+    <string name="remider_repeat">Repeat</string>
+    <string name="profile_remider">Remider</string>
+</resources>

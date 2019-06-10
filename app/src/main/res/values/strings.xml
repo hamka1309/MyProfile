@@ -1,7 +1,4 @@
 <resources>
-    <string name="app_name">App1</string>
-
-    <!--<editor-fold desc="PROFILE">-->
     <string name="profile_name">Name</string>
     <string name="profile_hint_name"><i>Example</i></string>
     <string name="profile_birthday">Birthday</string>
@@ -16,7 +13,22 @@
     <string name="profile_info">Enter the height and weight to calculate IBM </string>
     <string name="profile_hint_weight"><i>0.0</i></string>
     <string name="profile_hint_height"><i>0</i></string>
-    <!--</editor-fold>-->
+    <string name="profile_gender">Gender</string>
+
+    <string name="main_error_date">Can\'t choose a date in the future</string>
+    <string name="main_lever_normal">Normal</string>
+    <string name="main_lever_underweight">Underweight</string>
+    <string name="main_lever_overweight">Overweight</string>
+    <string name="main_lever_fat">Fat</string>
+    <string name="main_save_success">Save Success</string>
+    <string name="main_error_email">Invalided email</string>
+    <string name="main_error_permission">Permission isn\'t granted</string>
+    <string name="main_error_permission1">Permisson don\'t granted and dont show dialog again</string>
+    <string name="main_error_picture">You haven\'t picked Image</string>
+    <string name="app_name">App1</string>
+
+    <string name="remider_repeat">Repeat</string>
+    <string name="profile_remider">Remider</string>
 
 
 </resources>
