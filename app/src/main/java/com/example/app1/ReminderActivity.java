@@ -108,10 +108,6 @@ public class ReminderActivity extends AppCompatActivity implements View.OnClickL
             manager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 1000 * 60 * 60*12*7*4, pendingIntent);
         }
 
-
-
     }
-
-
 
 }
