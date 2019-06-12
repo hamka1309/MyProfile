@@ -14,7 +14,6 @@
     <string name="profile_hint_weight"><i>0.0</i></string>
     <string name="profile_hint_height"><i>0</i></string>
     <string name="profile_gender">Gender</string>
-
     <string name="main_error_date">Can\'t choose a date in the future</string>
     <string name="main_lever_normal">Normal</string>
     <string name="main_lever_underweight">Underweight</string>
@@ -26,9 +25,13 @@
     <string name="main_error_permission1">Permission don\'t granted and don\'t show dialog again</string>
     <string name="main_error_picture">You haven\'t picked Image</string>
     <string name="app_name">App1</string>
-
     <string name="reminder_repeat">Repeat</string>
     <string name="profile_reminder">Reminder</string>
+
+
+    <string name="period_tracker">Period Tracker</string>
+    <string name="content_header">Please give uss some information so we can track the cycle for you in the faster and most accurate way!</string>
+    <string name="content_hello"><b>Hello my lady!</b></string>
 
 
 </resources>

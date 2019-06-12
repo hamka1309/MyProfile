@@ -94,16 +94,17 @@ public class ReminderActivity extends AppCompatActivity implements View.OnClickL
 
         Toast.makeText(ReminderActivity.this, "It's :" + timePicker.getCurrentHour() + "h:" + timePicker.getCurrentMinute() + "minutes", Toast.LENGTH_SHORT).show();
 
-        if(spinnerRepeat.getSelectedItem().toString().equalsIgnoreCase("Daily"))
+        String s = spinnerRepeat.getSelectedItem().toString();
+        if(s.equalsIgnoreCase("Daily"))
         {
             //manager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
             manager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
         }
-        else if(spinnerRepeat.getSelectedItem().toString().equalsIgnoreCase("Weekly"))
+        else if(s.equalsIgnoreCase("Weekly"))
         {
             manager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 1000 * 60 * 60*12*7, pendingIntent);
 
-        }else if (spinnerRepeat.getSelectedItem().toString().equalsIgnoreCase("Monthly"))
+        }else if (s.equalsIgnoreCase("Monthly"))
         {
             manager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 1000 * 60 * 60*12*7*4, pendingIntent);
         }
