@@ -9,52 +9,59 @@
     android:visibility="visible"
     tools:visibility="visible">
 
-   <TextView
-       android:id="@+id/tv_period_tracker"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:text="@string/period_tracker"
-       android:textColor="@android:color/white"
-       app:layout_constraintRight_toRightOf="parent"
-       app:layout_constraintLeft_toLeftOf="parent"
-       app:layout_constraintTop_toTopOf="parent"
-       android:layout_marginTop="@dimen/dp24"
-       android:gravity="center"
-       android:textSize="@dimen/dp32"
-       />
-   <TextView
-       android:id="@+id/tv_hello"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       app:layout_constraintLeft_toLeftOf="parent"
-       app:layout_constraintTop_toBottomOf="@id/tv_period_tracker"
-       android:layout_marginLeft="@dimen/dp24"
-       android:text="@string/content_hello"
-       android:textColor="@android:color/white"
-       android:layout_marginTop="@dimen/dp44"
-       />
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      app:layout_constraintTop_toBottomOf="@id/tv_hello"
-      android:id="@+id/lv_content"
-      >
-     <TextView
-         android:id="@+id/tv_content"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         app:layout_constraintLeft_toLeftOf="parent"
-         app:layout_constraintTop_toBottomOf="@id/tv_hello"
-         android:layout_marginLeft="@dimen/dp24"
-         android:layout_marginTop="@dimen/dp16"
-         android:layout_marginRight="@dimen/dp24"
-         android:textColor="@android:color/white"
-         android:background="?attr/selectableItemBackground"
-         android:text="@string/content_header"
-         />
+    <TextView
+        android:id="@+id/tv_period_tracker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/albondigas"
+        android:gravity="center"
+        android:text="@string/on_boarding_title"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp48"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-  </LinearLayout>
+    <TextView
+        android:id="@+id/tv_hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp24"
+        android:layout_marginTop="@dimen/dp36"
+        android:text="@string/on_boarding_hello"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_period_tracker" />
 
+    <LinearLayout
+        android:id="@+id/lv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_hello">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp24"
+            android:layout_marginTop="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp24"
+            android:background="?attr/selectableItemBackground"
+            android:text="@string/on_boarding_content"
+            android:textColor="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_hello" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp32"
+        android:background="@drawable/on_boarding_selector"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/lv_content"></LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>

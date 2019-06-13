@@ -1,11 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-<ImageView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:background="@drawable/on_boarding_selector"
+    android:orientation="vertical"
 
-    />
+
+    >
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp24"></Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/all_days"
+        android:textColor="#f86667" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp44"
+        android:layout_marginTop="@dimen/dp24"
+        android:layout_marginRight="@dimen/dp44"
+        android:gravity="center"
+        android:text="@string/choose_cycle_question1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp16"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp44"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginRight="@dimen/dp44"
+        android:layout_marginBottom="@dimen/dp32"
+        android:gravity="center"
+        android:text="@string/choose_cycle_note1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp32"
+        android:background="@drawable/period"
+
+        />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp24"></Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/all_days"
+        android:textColor="#f86667" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp44"
+        android:layout_marginTop="@dimen/dp32"
+        android:layout_marginRight="@dimen/dp44"
+        android:gravity="center"
+        android:text="@string/choose_cycle_question2"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp16"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp44"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginRight="@dimen/dp44"
+        android:gravity="center"
+        android:text="@string/choose_cycle_note2" />
+
+    <Button
+        android:id="@+id/bt_next"
+        android:layout_width="@dimen/dp180"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp36"
+        android:layout_marginBottom="@dimen/dp24"
+        android:background="@drawable/on_boarding_selector_next"
+        android:text="@string/all_next" />
 </LinearLayout>

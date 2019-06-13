@@ -29,9 +29,19 @@
     <string name="profile_reminder">Reminder</string>
 
 
-    <string name="period_tracker">Period Tracker</string>
-    <string name="content_header">Please give uss some information so we can track the cycle for you in the faster and most accurate way!</string>
-    <string name="content_hello"><b>Hello my lady!</b></string>
+    <!--region period-->
+    <string name="on_boarding_title">Period Tracker</string>
+    <string name="on_boarding_content">Please give uss some information so we can track the cycle for you in the faster and most accurate way!</string>
+    <string name="on_boarding_hello"><b>Hello my lady!</b></string>
+    <string name="choose_cycle_question1">HOW LONG IS YOU PERIOD?</string>
+    <string name="choose_cycle_question2">HOW MANY DAYS BETWEEN 2 PERIOD?</string>
+    <string name="choose_cycle_note1">Menstrual period usually lasts 4-7 days</string>
+    <string name="choose_cycle_note2">The interval between two periods usually lasts 22-35 days</string>
+    <string name="all_days">Days</string>
+    <string name="choose_day_note">* If you don\'t remember correctly, you can adjust information in the Edit Cycle section of Settings</string>
+    <string name="choose_day_question">WHEN DOES YOUR LAST PRERIOD BEGIN?</string>
+    <string name="all_next">Next</string>
+    <!--endregion-->
 
 
 </resources>
