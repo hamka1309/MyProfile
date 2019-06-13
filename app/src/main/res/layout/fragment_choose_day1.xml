@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/on_boarding_selector"
-
+android:orientation="vertical"
     >
 
     <LinearLayout
@@ -27,8 +27,6 @@
         android:layout_marginTop="@dimen/dp24"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/datePicker">
 
         <TextView
@@ -39,7 +37,7 @@
             android:textColor="@android:color/black" />
 
         <TextView
-            android:layout_width ="match_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp44"
             android:layout_marginRight="@dimen/dp44"
@@ -53,11 +51,8 @@
         android:layout_marginTop="@dimen/dp44"
         android:background="@drawable/on_boarding_selector_next"
         android:text="@string/all_next"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lv_content"
-        android:textColor="@android:color/white"
-        />
+        android:layout_gravity="center"
+        android:textColor="@android:color/white" />
 
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

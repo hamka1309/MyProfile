@@ -30,7 +30,7 @@
 
 
     <!--region period-->
-    <string name="on_boarding_title">Period Tracker</string>
+    <string name="all_title">Period Tracker</string>
     <string name="on_boarding_content">Please give uss some information so we can track the cycle for you in the faster and most accurate way!</string>
     <string name="on_boarding_hello"><b>Hello my lady!</b></string>
     <string name="choose_cycle_question1">HOW LONG IS YOU PERIOD?</string>
